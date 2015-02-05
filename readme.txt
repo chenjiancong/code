@@ -1,5 +1,1 @@
-Hello
-This is test.
-Creating a new branch is quick.
-Test,Test
-22222
+git checkout -b dev #创建dev分支
