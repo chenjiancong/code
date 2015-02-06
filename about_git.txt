@@ -15,14 +15,20 @@ git reflog    #查看commit_id
 
 #远程相关命令
 git clone git@github.com:name.com/project.git   #克隆项目
-git pull    #同步远程到本地
-git push origin branch_name   #推送到远程分支
+git pull origin <remote> <remote_branch_name>:<local_branch_name>   #同步远程到本地
+git push origin <remote> <local_branch_name>:<remote_branch_name>   #推送到远程分支
 git branch   #查看分支
 git checkout branch_name   #切换到分支
 git branch branch_name   #建立分支
-
+git fetch <remote>
 git merge branch_name   #合并分支到分支(首先要切换到待合并分支上，然后再执行要合并的分支
     ex：要将dev 与 master 合并，需先checkout 到 master 再执行 merge dev)
 git branch -d branch_name   #删除分支
+
+
+
+
+
+
 
 
