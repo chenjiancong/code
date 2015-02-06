@@ -1,4 +1,8 @@
-git init   #建立git
+#开始配置信息
+git config --global user.name "name"
+git config --global user.email "email@"
+
+git init   #初始化git
 git add file   #加入暂存区
 git commit -m "tag or something"   #暂存区文件提交
 git status   #查看git状态
