@@ -1,0 +1,23 @@
+git init   #建立git
+git add file   #加入暂存区
+git commit -m "tag or something"   #暂存区文件提交
+git status   #查看git状态
+
+#撤销
+git checkout -- file    #撤销工作区文件修改(未提交未加入暂存区)
+git reset HEAD file    #已加入暂存区未提交，然后再执行 checkout 命令
+git reset --hard HEAD^(commit_id)   #退回之前版本
+git reflog    #查看commit_id
+
+#远程相关命令
+git clone git@github.com:name.com/project.git   #克隆项目
+git pull    #同步远程到本地
+git push origin branch_name   #推送到远程分支
+git branch   #查看分支
+git checkout branch_name   #切换到分支
+git branch branch_name   #建立分支
+
+git merge branch_name   #合并分支到master
+git branch -d branch_name   #删除分支
+
+
