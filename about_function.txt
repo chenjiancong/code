@@ -1,0 +1,6 @@
+#一些函数的使用
+
+lambda(x,y:x+y)    #匿名函数
+reduce(表达式,范围)    #递归函数
+len(函数)          #计量函数长度
+raw_input("something")    #输入函数
