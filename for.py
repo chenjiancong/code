@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 #-*- coding: utf-8 -*-
 #Filename: for.py
 
 for x in range(1,11):
     print x
-    
+
     if x == 8:
         pass     #代码桩,起占位作用
     if x == 4:
