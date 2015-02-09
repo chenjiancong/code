@@ -1,3 +1,7 @@
+#Filename: about_git.txt
+#-*- coding:utf-8 -*-
+#关于git的相关命令
+
 #开始配置信息
 git config --global user.name "name"
 git config --global user.email "email@"
