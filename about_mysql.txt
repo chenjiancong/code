@@ -1,3 +1,6 @@
+#Filename: about_mysql.txt
+#-*- coding:utf-8 -*-
+
 #关于数据库操作部分
 
 本地连接数据库
