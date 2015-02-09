@@ -1,0 +1,35 @@
+#关于数据库操作部分
+
+本地连接数据库
+mysql -uroot -p
+
+查看数据库
+show databases;
+
+查看表
+show tables;
+
+创建数据库
+create database db_name;
+
+修改数据库密码
+mysql> set password for 'root'@'localhost'=password('newpass');
+
+删除数据库
+drop database db_name;
+
+备份数据库
+mysqldump -hhostname -uusername -ppassword db_name > backupfile.sql
+
+导入数据库
+mysql -hhostname -uusername -ppassword db_name < backupfile.sql
+
+
+
+
+
+
+
+
+
+
