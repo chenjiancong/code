@@ -4,3 +4,6 @@ lambda(x,y:x+y)    #匿名函数
 reduce(表达式,范围)    #递归函数
 len(函数)          #计量函数长度
 raw_input("something")    #输入函数
+range(x,y,z)       #列出从x到y，步长为z的数
+filter(f,[]) ==>       #与map类似，根据输入的数放入函数中，判断为True则输出
+sorted()               #排序函数
