@@ -11,6 +11,5 @@ print l1
 print '====l2===='
 for l2 in l1:
     print l2
-
-:
+print 'hello'
 print l1[0][0].upper()+l1[0][1:].lower()
