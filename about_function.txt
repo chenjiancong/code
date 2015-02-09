@@ -1,8 +1,11 @@
 #一些函数的使用
 
 lambda(x,y:x+y)    #匿名函数
+len(函数)          #计量函数长度
+range(x,y,z)       #列出从x到y，步长为z的数
+filter(f,[]) ==>       #与map类似，根据输入的数放入函数中，判断为True则输出
+sorted()               #排序函数
 reduce(表达式,范围)    #递归函数 ex reduce(lambda x,y:x+y,range(10))
-len(函数)          #计量函数长度 ex len('hello')
 raw_input("something")    #输入函数  ex raw_input("Enter you'r name: ")
 sum()              函数求和      ex sun(range(101))
 map(f,[])          输出一个list  ex map(lambda x,x*x,[1,2,3]) ==> [1,4,9]
