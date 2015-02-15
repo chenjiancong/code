@@ -1,0 +1,10 @@
+#-*- coding:utf-8 -*-
+#Filename: about_vim.txt
+
+#块操作（同时插入）
+C-V ==> 选择要插入的地方 ==> C-B ==>I ==> 插入内容 ==> ESC 结束
+
+#英文切换大小写
+gU 大写
+gu 小写
+
