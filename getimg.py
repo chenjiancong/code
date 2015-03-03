@@ -13,10 +13,14 @@ def gethtml(url):
 #print gethtml('http://bohaishibei.com/post/7883/')
 
 def getimg(html):
-    regex = r'<img.*? src="(.+?.jpg)"title.+?>'
+    regex = r'alt="".+? src="(.+?\.jpg)"'
     patten = re.compile(regex)
     url = re.findall(patten,html)
-    return url
+    #return url
+    x = 1
+    for img in url:
+        urllib.urlretrieve(img,"%s.jpg"%x)
+        x +=x
 
 html = gethtml('http://bohaishibei.com/post/7883/')
-print getimg(html)
+getimg(html)
