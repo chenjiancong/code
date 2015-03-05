@@ -6,7 +6,7 @@ import re
 import urllib2
 import urllib
 
-#urllib
+#urllib 反应速度较快
 def getHtml(url):
     page_open = urllib.urlopen(url)
     page_read = page_open.read()
@@ -14,7 +14,7 @@ def getHtml(url):
 
 #print getHtml('http://tieba.baidu.com/p/3614406057')
 
-#urllib2
+#urllib2 模拟浏览器,速度较慢
 #def getHtml(url):
 #    request = urllib2.Request(url)
 #    response = urllib2.urlopen(request)
@@ -31,4 +31,4 @@ def getImg(html):
 
 html = getHtml('http://tieba.baidu.com/p/3614406057')
 print getImg(html)
-#print len(getImg(html))
+print len(getImg(html))
