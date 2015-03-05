@@ -23,7 +23,7 @@ def getHtml(url):
 #print getHtml('http://www.baidu.com/')
 
 def getImg(html):
-    regex = r'alt="".+? src="(.+?\.jpg).+?"'
+    regex = r"""pic_ext="jpeg".*? src="(.*?\.jpg)".*?"""
     patten = re.compile(regex)
     imglist = re.findall(patten,html)
     return imglist
