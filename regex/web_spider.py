@@ -14,7 +14,7 @@ def getHtml(url):
 
 #print getHtml('http://tieba.baidu.com/p/3614406057')
 
-#urllib2 模拟浏览器,速度较慢
+#urllib2 模拟浏览器,速度较慢,部分网站限制spider，如baidu.com
 #def getHtml(url):
 #    request = urllib2.Request(url)
 #    response = urllib2.urlopen(request)
