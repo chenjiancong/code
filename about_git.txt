@@ -21,6 +21,8 @@ git reflog    #查看commit_id
 git remote add origin git@github.com:name/project.git               #添加远程主机
 git clone git@github.com:name.com/project.git   #克隆项目
 git pull origin <remote> <remote_branch_name>:<local_branch_name>   #取回远程的某个分支到本地并合并
+                                                                    #相当先执行fetch,再执行merge
+
 git fetch orign branch_name                                         #将远程分支取回到本地
 git push origin <remote> <local_branch_name>:<remote_branch_name>   #推送到远程分支
 git branch      #查看本地分支
