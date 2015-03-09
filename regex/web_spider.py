@@ -18,7 +18,7 @@ def getHtml(url):
 #def getHtml(url):
 #    request = urllib2.Request(url)
 #    response = urllib2.urlopen(request)
-#    page = response.read()
+#    page_read = response.read()
 #    return page
 #
 #print getHtml('http://tieba.baidu.com/p/3614406057')
