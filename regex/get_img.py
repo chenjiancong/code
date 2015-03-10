@@ -6,6 +6,8 @@ import re
 import urllib2
 import urllib
 
+#------------GetImg------------
+
 #urllib 反应速度较快
 def getHtml(url):
     page_open = urllib.urlopen(url)
