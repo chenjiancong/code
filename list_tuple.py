@@ -36,4 +36,22 @@ L = ['a1','a2','a3','a4']
 #t = (1,) 表示1个元素的tuple
 
 
+#-------About Dict-------
+#dict特点:
+#1,查找速度快,但占用内存大(list正好与之相反)
+#2,存储key-value是无顺序的(list有顺序)
+#3,key元素必须不可变
 
+dict = {'A':90,'B':80,'C':70,'D':60}
+#访问字典元素
+#get()
+print dict.get('D')
+print dict.get('E')
+
+#添加元素&修改元素
+dict['Z'] = 10
+dict['D'] = 59
+
+#遍历dict的key
+for key in dict:
+    print key
