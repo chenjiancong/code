@@ -55,3 +55,31 @@ dict['D'] = 59
 #遍历dict的key
 for key in dict:
     print key
+
+#-------About Set-------
+#1,set元素是无序且不重复
+#2,元素不可变
+#3,set与dict很似,唯一区别是不存储value,因此判断元素是否在set很快
+
+#显示set(['A','B','C','D'])
+s = set(['A','B','C','C','D'])
+print s
+
+#访问set
+#set不能通过索引来访问,只能判断元素是否在set中
+#如判断'E'是否在s中
+print 'E' in s
+print 'A' in s
+
+#判断元素是否在set里
+x = 'WED'
+weekdays = set(['MON','TUE','WED','THU','FRI','SAT','SUN'])
+if x in weekdays:
+    print 'input right'
+else:
+    print 'input wrong'
+
+#添加&删除元素
+s2 = set(['A','B','C'])
+s2.add('Y')            #无论Y是否在元素里,都增加进去
+s2.remove('G')         #先判断G是否在元素里,再删除
