@@ -106,8 +106,8 @@ hi Tb_Changed guifg=green ctermfg=green
 hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
-" easy-motion
-let g:EasyMotion_leader_key = '<Leader>'
+" easy-motion 快速跳转 按 \\w
+let g:EasyMotion_leader_key = '<leader>'
 
 " Tagbar
 let g:tagbar_left=1
@@ -309,7 +309,7 @@ function! AutoSetFileHead()
     "如果文件类型为python
     if &filetype == 'python'
         call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\#-*- coding: utf-8 -*-")
+        call append(1, "\#-*- coding: UTF-8 -*-")
     endif
 
     normal G

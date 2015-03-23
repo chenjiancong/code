@@ -6,3 +6,4 @@
 
 print reduce(lambda x,y:x+y,range(1,101,3))
 print range(1,101,3)
+print reduce(lambda x,y:x+y,range(1,101,3))

@@ -3,14 +3,14 @@
 #Filename: get_email.py
 
 import re
-#import urllib
+import urllib
 import urllib2
 
 #use urllib
-#def getHtml(url):
-#    open_page = urllib.urlopen(url)
-#    page_read = open_page.read()
-#    return page_read
+def getHtml(url):
+    open_page = urllib.urlopen(url)
+    page_read = open_page.read()
+    return page_read
 
 #use urllib2
 def getHtml(url):
