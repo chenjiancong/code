@@ -19,3 +19,13 @@ cmp(1,1) ==> 0
 cmp(1,3) ==> -1
 
 """
+#values()与itervalues()区别
+values()将dict转换成list
+itervalues(),不转换,直接迭代取出values,更节省内存
+
+#items()与iteritems()区别
+与上面的类似,items()是取key跟values
+
+#isinstance(x,str)
+isinstance('a',str) ->True
+判断x是否是str
