@@ -18,8 +18,9 @@ create database db_name;
 修改数据库密码
 mysql> set password for 'root'@'localhost'=password('newpass');
 
-删除数据库
+删除数据库/表
 drop database db_name;
+drop table tb_name;
 
 备份数据库
 mysqldump -hhostname -uusername -ppassword db_name > backupfile.sql
