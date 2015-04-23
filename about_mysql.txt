@@ -28,7 +28,8 @@ mysqldump -hhostname -uusername -ppassword db_name > backupfile.sql
 导入数据库
 mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 
-
+插入数据到表里
+insert into table_na values(...);
 
 
 
