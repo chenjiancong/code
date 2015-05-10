@@ -27,14 +27,6 @@ print s1
 
 
 
-
-
-
-
-
-
-
-
 =======
 s1 = [m + n for m in "ABC" for n in "XYZ"]
 print s1
