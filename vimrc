@@ -316,3 +316,6 @@ function! AutoSetFileHead()
     normal o
     normal o
 endfunc
+
+" 重映射键盘
+inoremap jj <ESC>
