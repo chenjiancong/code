@@ -7,3 +7,4 @@ def application(environ, start_response):
     return '<h1>Hello, %s!</h1>' % (environ['PATH_INFO'][1:] or 'web')
 #    return '<h1>Hello,web!</h1>'
 
+
