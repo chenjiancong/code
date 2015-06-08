@@ -7,6 +7,9 @@ export ZSH=/home/jack/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+#Make Tmux use vim-color
+alias tmux='tmux -2'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
