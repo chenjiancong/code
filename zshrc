@@ -7,6 +7,9 @@ export ZSH=/home/jack/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+#AUTO_CD
+setopt AUTO_CD
+
 #Make Tmux use vim-color
 alias tmux='tmux -2'
 
