@@ -18,6 +18,11 @@ create database db_name;
 修改数据库密码
 mysql> set password for 'root'@'localhost'=password('newpass');
 
+修改列
+alter table tb_name modify 列名 新类型 新参数
+alter table tb_name change 旧列名 新列名 新类型 新参数
+
+
 删除数据库/表
 drop database db_name;
 drop table tb_name;
