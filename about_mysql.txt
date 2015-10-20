@@ -1,7 +1,7 @@
 #Filename: about_mysql.txt
 #-*- coding:utf-8 -*-
 
-#关于数据库操作部分
+/*------------关于数据库操作部分-------------*/
 
 本地连接数据库
 mysql -uroot -p
@@ -37,7 +37,10 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 insert into table_na values(...);
 
 
+/*-----------SQL ERROR-------------*/
 
+ERROR 2002
+stemctl start mysqld
 
 
 
