@@ -5,9 +5,8 @@ export ZSH=/home/jack/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-<<<<<<< HEAD
+
 ZSH_THEME="dieter"
-=======
 ZSH_THEME="robbyrussell"
 
 #AUTO_CD
@@ -15,7 +14,6 @@ setopt AUTO_CD
 
 #Make Tmux use vim-color
 alias tmux='tmux -2'
->>>>>>> arch_work
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,7 +86,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-<<<<<<< HEAD
 #
 
 export EDITOR="vim"
@@ -99,5 +96,3 @@ bindkey -v
  bindkey '^S' history-incremental-search-forward
  bindkey '^P' history-search-backward
  bindkey '^N' history-search-forward
-=======
->>>>>>> arch_work
