@@ -1,7 +1,7 @@
 #Filename: about_mysql.txt
 #-*- coding:utf-8 -*-
 
-#关于数据库操作部分
+/*------------关于数据库操作部分-------------*/
 
 本地连接数据库
 mysql -uroot -p
@@ -18,6 +18,11 @@ create database db_name;
 修改数据库密码
 mysql> set password for 'root'@'localhost'=password('newpass');
 
+修改列
+alter table tb_name modify 列名 新类型 新参数
+alter table tb_name change 旧列名 新列名 新类型 新参数
+
+
 删除数据库/表
 drop database db_name;
 drop table tb_name;
@@ -32,7 +37,10 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 insert into table_na values(...);
 
 
+/*-----------SQL ERROR-------------*/
 
+ERROR 2002
+stemctl start mysqld
 
 
 

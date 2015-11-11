@@ -1,0 +1,16 @@
+/* CSS style */
+
+body{
+  font-family:"Microsoft Yahei";
+  font-size:14px;
+}
+
+#osi_table_1{
+  border-collapse:collapse;  /* 折叠边框 (折叠为单一边框)*/
+  width:600px;
+}
+
+#osi_table_1 td,#osi_table_1 th{
+  border:1px solid #666;
+  text-align:left;
+}

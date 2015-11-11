@@ -223,8 +223,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
 " When editing a file, always jump to the last cursor position
+"
 autocmd BufReadPost *
       \ if ! exists("g:leave_my_cursor_position_alone") |
       \     if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -316,3 +316,7 @@ function! AutoSetFileHead()
     normal o
     normal o
 endfunc
+
+" 重映射键盘
+inoremap jj <ESC>;
+
