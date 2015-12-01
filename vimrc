@@ -1,13 +1,32 @@
 source ~/.vim/bundles.vim
 
-" encoding dectection
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+"==========================================
+"" FileEncode Settings 文件编码,格式
+"==========================================
+"  设置新文件的编码为 UTF-8
+set encoding=utf-8
+
+" "自动判断编码时，依次尝试以下编码：
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set helplang=cn
+
+" 下面这句只影响普通模式 (非图形界面) 下的 Vim。
+set termencoding=utf-8
+
+" " Use Unix as the standard file type
+ set ffs=unix,dos,mac
+
+" " 如遇Unicode值大于255的文本，不必等到空格再折行。
+set formatoptions+=m
+" " 合并两行中文时，不在中间加空格：
+set formatoptions+=B
 
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
 " enable syntax hightlight and completion 语法高亮
 syntax on
+
 
 "--------
 " Vim UI
@@ -106,8 +125,8 @@ hi Tb_Changed guifg=green ctermfg=green
 hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
-" easy-motion 快速跳转 按 \\w
-let g:EasyMotion_leader_key = '<leader>'
+" easy-motion 快速跳转 按 空格+w
+let g:EasyMotion_leader_key = '<Space>'
 
 " Tagbar
 let g:tagbar_left=1
@@ -277,26 +296,6 @@ if has("gui_running")
 endif
 
 
-"==========================================
-"" FileEncode Settings 文件编码,格式
-"==========================================
-"" 设置新文件的编码为 UTF-8
-set encoding=utf-8
-" 自动判断编码时，依次尝试以下编码：
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set helplang=cn
-"set langmenu=zh_CN.UTF-8
-"set enc=2byte-gb18030
-" 下面这句只影响普通模式 (非图形界面) 下的 Vim。
-set termencoding=utf-8
-"
-" " Use Unix as the standard file type
- set ffs=unix,dos,mac
-"
-" " 如遇Unicode值大于255的文本，不必等到空格再折行。
-set formatoptions+=m
-" " 合并两行中文时，不在中间加空格：
-set formatoptions+=B
 
 " 定义函数AutoSetFileHead，自动插入文件头
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
@@ -317,6 +316,26 @@ function! AutoSetFileHead()
     normal o
 endfunc
 
-" 重映射键盘
+"连续按jj退出插入模式
 inoremap jj <ESC>;
+" 空格键作为Leader(热键)
+"let mapleader = "<Space>"
+" <Space>w 保存文件
+"nnoremap <Leader>w :w<CR>
+"<Space>p <Space>y进行剪切、拷贝、粘贴
+"
+"vmap <Leader>y "+y
+"vmap <Leader>d "+d
+"nmap <Leader>p "+p
+"nmap <Leader>p "+p
+"vmap <Leader>p "+p
+"vmap <Leader>p "+p
+"使用 ppppp进行多行多次粘贴操作
+"vnoremap <silent>y y`]
+"vnoremap <silent>p p`]
+"nnoremap <silent>p p`]
+
+"查找替换
+vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gvomap s :normal vs<CR>
+
 
