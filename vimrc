@@ -338,4 +338,9 @@ inoremap jj <ESC>;
 "查找替换
 vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gvomap s :normal vs<CR>
 
-
+"快速跳转
+"通过12<Enter>跳转到12行
+"按<Enter>跳转到文件末尾
+"按<Backspace>回到文件开始
+nnoremap <CR> G
+nnoremap <BS> gg
