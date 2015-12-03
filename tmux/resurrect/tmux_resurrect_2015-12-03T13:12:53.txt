@@ -1,0 +1,8 @@
+pane	3	1	:~/code	1	:*	0	:/home/jack/code	1	zsh	:
+pane	4	1	:..mux-continuum	1	:*	0	:/home/jack	0	vim	:vim code/tmux.conf
+pane	4	1	:..mux-continuum	1	:*	1	:/home/jack/code/tmux/tmux-continuum	1	zsh	:
+pane	6	1	:~	1	:*	0	:/home/jack	1	zsh	:
+window	3	1	1	:*	be20,78x45,0,0,3
+window	4	1	1	:*	ab24,78x45,0,0[78x22,0,0,4,78x22,0,23,7]
+window	6	1	1	:*	be23,78x45,0,0,6
+state	4	6

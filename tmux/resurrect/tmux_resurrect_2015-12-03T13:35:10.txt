@@ -1,0 +1,9 @@
+pane	11	1	:vim	1	:*	0	:/home/jack/code	1	vim	:vim tmux.conf
+pane	12	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	13	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	dev	1	:vim	1	:*	0	:/home/jack/code	1	vim	:vim about_tmux.txt
+window	11	1	1	:*	5f42,78x45,0,0,13
+window	12	1	1	:*	5f43,78x45,0,0,14
+window	13	1	1	:*	5f44,78x45,0,0,15
+window	dev	1	1	:*	5f45,78x45,0,0,16
+state	11	dev
