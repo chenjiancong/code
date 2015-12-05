@@ -1,0 +1,9 @@
+pane	1	1	:../webpy/flaskr	1	:*	0	:/home/jack/code/webpy/flaskr	1	zsh	:
+pane	2	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	3	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	4	1	:~	1	:*	0	:/home/jack	1	zsh	:
+window	1	1	1	:*	cffd,160x49,0,0,0
+window	2	1	1	:*	be1e,78x45,0,0,1
+window	3	1	1	:*	be1f,78x45,0,0,2
+window	4	1	1	:*	be20,78x45,0,0,3
+state	1	3

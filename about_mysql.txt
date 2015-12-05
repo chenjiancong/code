@@ -42,7 +42,9 @@ insert into table_na values(...);
 ERROR 2002
 stemctl start mysqld
 
-
+# schema.sql使用
+mysql> source schema.sql
+mysql -u yourusername -p yourpassword yourdatabase < schema.sql
 
 
 

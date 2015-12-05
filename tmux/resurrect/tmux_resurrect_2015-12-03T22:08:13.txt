@@ -1,0 +1,12 @@
+pane	1	1	:vim	1	:*	0	:/home/jack/code/web/flaskr	1	vim	:vim flaskr.py
+pane	1	1	:vim	1	:*	1	:/home/jack/code/webpy/flaskr	0	vim	:vim flaskr.py
+pane	2	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	3	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	4	1	:~	1	:*	0	:/home/jack	1	zsh	:
+pane	5	1	:~	1	:*	0	:/home/jack	1	zsh	:
+window	1	1	1	:*	ab28,78x45,0,0[78x22,0,0,5,78x22,0,23,7]
+window	2	1	1	:*	cffe,160x49,0,0,1
+window	3	1	1	:*	cfff,160x49,0,0,2
+window	4	1	1	:*	d000,160x49,0,0,3
+window	5	1	1	:*	d003,160x49,0,0,6
+state	1	2

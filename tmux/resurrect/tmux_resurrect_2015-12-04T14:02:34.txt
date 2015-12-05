@@ -1,0 +1,7 @@
+pane	0	1	:exit	1	:*	0	:/home/jack/code/web/flaskr	1	vim	:vim flaskr.py
+pane	1	1	:pacman	1	:*	0	:/home/jack/code/web/flaskr	1	sudo	:sudo pacman -Syu
+pane	2	1	:~	1	:*	0	:/home/jack	1	zsh	:
+window	0	1	1	:*	ae5e,80x23,0,0,1
+window	1	1	1	:*	be22,78x45,0,0,5
+window	2	1	1	:*	ae63,80x23,0,0,6
+state	1	0
