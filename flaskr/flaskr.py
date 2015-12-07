@@ -40,12 +40,12 @@ def before_request():
 #    g.db.close()
 
 
-#@application.after_request
-#def after_request(response):
-#    """Closes the database again at the end of the request."""
-#    g.db.close()
-#    return response
-#
+@app.after_request
+def after_request(response):
+    """Closes the database again at the end of the request."""
+    g.db.close()
+    return response
+
 @app.route('/')
 def show_entries():
     cur = g.db.cursor(DictCursor)
