@@ -15,6 +15,9 @@ show tables;
 创建数据库
 create database db_name;
 
+创建数据表
+create table tb_name;
+
 修改数据库密码
 mysql> set password for 'root'@'localhost'=password('newpass');
 
@@ -46,5 +49,6 @@ stemctl start mysqld
 mysql> source schema.sql
 mysql -u yourusername -p yourpassword yourdatabase < schema.sql
 
-
+python 提示" no module named MySQLdb "
+pip install mysql-python
 

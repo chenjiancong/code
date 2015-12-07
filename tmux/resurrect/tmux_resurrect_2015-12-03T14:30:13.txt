@@ -1,3 +1,0 @@
-pane	0	1	:..amples/flaskr	1	:*	0	:/home/jack/code/flask/examples/flaskr	1	zsh	:
-window	0	1	1	:*	be1d,78x45,0,0,0
-state	0	

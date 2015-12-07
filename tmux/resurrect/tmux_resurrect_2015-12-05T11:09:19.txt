@@ -1,7 +1,0 @@
-pane	0	1	:vim	1	:*	0	:/home/jack/code/web/flaskr	1	vim	:vim flaskr.py
-pane	1	1	:su	1	:*	0	:/home/jack	1	bash	:su
-pane	2	1	:~	1	:*	0	:/home/jack	1	zsh	:
-window	0	1	1	:*	be1e,78x45,0,0,1
-window	1	1	1	:*	be1f,78x45,0,0,2
-window	2	1	1	:*	be20,78x45,0,0,3
-state	1	0

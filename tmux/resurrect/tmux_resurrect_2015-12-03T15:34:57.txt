@@ -1,3 +1,0 @@
-pane	0	1	:..de/web/flaskr	1	:*	0	:/home/jack/code/web/flaskr	1	zsh	:
-window	0	1	1	:*	be1e,78x45,0,0,1
-state	0	

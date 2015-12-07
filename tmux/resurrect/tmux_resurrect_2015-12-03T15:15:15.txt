@@ -1,4 +1,0 @@
-pane	0	1	:vim	1	:*	0	:/home/jack/code/flaskr	0	vim	:vim flaskr.py
-pane	0	1	:vim	1	:*	1	:/home/jack/code/web/flaskr	1	vim	:vim flaskr.py
-window	0	1	1	:*	ab11,78x45,0,0[78x22,0,0,0,78x22,0,23,1]
-state	0	

@@ -1,3 +1,0 @@
-pane	0	1	:~/code	1	:*	0	:/home/jack/code	1	zsh	:
-window	0	1	1	:*	be1d,78x45,0,0,0
-state	0	
