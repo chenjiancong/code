@@ -19,3 +19,23 @@ NG 到指定一行
 gg 到首行
 G  到末行
 ^  到行头
+
+#2015.11.30
+http://www.codeceo.com/article/vim-language.html
+
+d   delete
+r   replace
+c   change
+y   change
+v   visual select
+
+w   word
+s   sentence
+p   paragraph
+t   tag
+
+i   inside
+a   around
+t   to
+f   forward
+
