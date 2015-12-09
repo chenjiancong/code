@@ -39,6 +39,8 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 插入数据到表里
 insert into table_na values(...);
 
+更新数据
+update table_na set values=xxx where id=xxx;
 
 /*-----------SQL ERROR-------------*/
 
