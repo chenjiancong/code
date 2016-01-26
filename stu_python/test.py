@@ -1,13 +1,10 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 
-#for x in range(1,20,3):
-#    print x
+def endroll(name, gender, age=6, city='BeiJing'):
+    print 'name', name
+    print 'gender', gender
+    print 'age', age
+    print 'city', city
 
-print reduce(lambda x,y:x+y,range(1,101,3))
-print range(1,101,3)
-print reduce(lambda x,y:x+y,range(1,101,3))
-
-test1
-test2
-test3
+endroll('jack', 'F')

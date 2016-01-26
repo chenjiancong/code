@@ -1,0 +1,11 @@
+# About Command linux line
+
+创建文件夹
+mkdir 1 2 3         #批量创建1,2,3文件夹
+mkdir 123{1,2,3,4}  #批量创建12341,12342,12343,12344文件夹
+
+# vim强制保存
+:w !sudo tee %
+
+#命令行跳转到最前/后
+ctrl + a / e
