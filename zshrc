@@ -5,6 +5,8 @@ export ZSH=/home/jack/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
+ZSH_THEME="dieter"
 ZSH_THEME="robbyrussell"
 
 #AUTO_CD
@@ -84,3 +86,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+export EDITOR="vim"
+bindkey -v
+
+# vi style incremental search
+ bindkey '^R' history-incremental-search-backward
+ bindkey '^S' history-incremental-search-forward
+ bindkey '^P' history-search-backward
+ bindkey '^N' history-search-forward

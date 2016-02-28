@@ -22,6 +22,8 @@ git remote add origin git@github.com:name/project.git               #添加远�
 git clone git@github.com:name.com/project.git   #克隆项目
 git pull origin <remote> <remote_branch_name>:<local_branch_name>   #取回远程的某个分支到本地并合并
                                                                     #相当先执行fetch,再执行merge
+#取远程分支作为本地新分支
+git checkout -b newBranch origin/master
 
 git fetch orign branch_name                                         #将远程分支取回到本地
 git push origin <remote> <local_branch_name>:<remote_branch_name>   #推送到远程分支
@@ -30,7 +32,7 @@ git branch -r   #查看远程分支
 git checkout branch_name   #切换到分支
 git branch branch_name   #建立分支
 git fetch <remote>
-git merge branch_name   #合并分支到分支(首先要切换到待合并分支上，然后再执行要合并的分支
+git merge branch_name   #合并分支(首先要切换到待合并分支上，然后再执行要合并的分支
     ex：要将dev 与 master 合并，需先checkout 到 master 再执行 merge dev)
 git branch -d branch_name   #删除分支
 git push origin :branch_name  #删除远程分支(推送一个空分支)

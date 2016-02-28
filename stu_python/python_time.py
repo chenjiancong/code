@@ -5,5 +5,5 @@
 import time
 
 strftime = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-print strftime
+print strftime()
 
