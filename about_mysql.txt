@@ -36,6 +36,12 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 插入数据到表里
 insert into table_na values(...);
 
+删除表中数据
+delete tb_name where id=XXX;
+
+更新表中数据
+update tb_name set id=new_date where id=old_date;
+
 
 /*-----------SQL ERROR-------------*/
 
