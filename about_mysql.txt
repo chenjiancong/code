@@ -40,7 +40,7 @@ insert into table_na values(...);
 /*-----------SQL ERROR-------------*/
 
 ERROR 2002
-stemctl start mysqld
+stemctl start mysqld/mariadb
 
 
 
