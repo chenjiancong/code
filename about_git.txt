@@ -5,6 +5,8 @@
 #开始配置信息
 git config --global user.name "name"
 git config --global user.email "email@"
+#打开色彩显示
+git config --global color.ui true
 
 git init   #初始化git
 git add file   #加入暂存区
