@@ -39,13 +39,22 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 插入数据到表里
 insert into table_na values(...);
 
+<<<<<<< HEAD
 更新数据
 update table_na set values=xxx where id=xxx;
+=======
+删除表中数据
+delete tb_name where id=XXX;
+
+更新表中数据
+update tb_name set id=new_date where id=old_date;
+
+>>>>>>> centos
 
 /*-----------SQL ERROR-------------*/
 
 ERROR 2002
-stemctl start mysqld
+stemctl start mysqld/mariadb
 
 # schema.sql使用
 mysql> source schema.sql
