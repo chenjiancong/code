@@ -5,17 +5,22 @@
 #开始配置信息
 git config --global user.name "name"
 git config --global user.email "email@"
+#打开色彩显示
+git config --global color.ui true
 
 git init   #初始化git
 git add file   #加入暂存区
 git commit -m "tag or something"   #暂存区文件提交
 git status   #查看git状态
 
+#查看log
+git reflog    #查看commit_id
+git log --pretty=oneline
+
 #撤销
 git checkout -- file    #撤销工作区文件修改(未提交未加入暂存区)
 git reset HEAD file    #已加入暂存区未提交，然后再执行 checkout 命令
 git reset --hard HEAD^(commit_id)   #退回之前版本
-git reflog    #查看commit_id
 
 #远程相关命令
 git remote add origin git@github.com:name/project.git               #添加远程主机

@@ -1,0 +1,8 @@
+#.gitconfig放在主目录下
+[user]
+	name = chenjiancong
+	email = chenjiancong@gmail.com
+[color]
+	ui = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
