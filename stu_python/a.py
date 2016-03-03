@@ -17,3 +17,10 @@ a = 99
 while a > 0:
     a = a -2
 print a
+
+num = int(raw_input('enter num:'))
+print num
+
+
+s = set([1,num,3])
+print s
