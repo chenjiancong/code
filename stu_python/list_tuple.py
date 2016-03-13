@@ -52,6 +52,9 @@ print dict.get('E')
 dict['Z'] = 10
 dict['D'] = 59
 
+#  删除字典元素
+del dict['D']
+
 #遍历dict的key
 for key in dict:
     print key
