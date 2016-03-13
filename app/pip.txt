@@ -1,0 +1,4 @@
+flask-bootstrap
+flask-wtf
+flask-moment
+flask-sqlalchemy
