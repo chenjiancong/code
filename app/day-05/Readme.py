@@ -1,4 +1,8 @@
-Flask学习 pip安装多个软件 pip install -r softs.txt Day-00 1,创建'hello,world' 2,创建静态路由 @app.route('/user/<name>') def user(name):
+Flask学习
+pip安装多个软件 pip install -r softs.txt
+Day-00
+1,创建'hello,world'
+2,创建静态路由 @app.route('/user/<name>') def user(name):
     return 'hello, {name}'.format(name=name)
 
 3,掌握最基本框架
@@ -34,6 +38,7 @@ def user(name):
     return render_template('user.html', name=name)
 #templates/user.html
     <h1>Hello, {{name}}</h1>
+
 模板中变量可加参数
 {{name|capitalize}}
 
