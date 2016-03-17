@@ -100,13 +100,14 @@ login.html 注意的地方
 from flask import Flask, session, render_template, request
 from flask.ext.bootstrap import Bootstrap
 
-app = Flask(__name__)
-bootstrap = Bootstrap(app)
-
+#  下面4行要放在from下面
 DEBUG = True
 SECRET_KEY = 'SOMETHING STRANG'
 USERNAME = 'admin'
 PASSWORD = '123'
+
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
@@ -129,3 +130,7 @@ def login():
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
 
+Day-07
+插入flash 消息提示
+from flask import Flask, flash, session, render_template
+from flask.ext.bootstrap import Bootstrap
