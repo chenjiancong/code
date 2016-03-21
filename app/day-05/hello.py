@@ -1,40 +1,27 @@
-from flask import Flask, render_template, request, url_for, flash, redirect, session
+from flask import Flask, render_template, flash
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.wtf import Form
-from wtforms import StringField, SubmitField
-from wtforms.validators import Required
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, EqualTo
 
-#  configuration
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
-app.config['SECRET_KEY'] = 'hard to guess string'
-USERNAME = 'admin'
-PASSWORD = '123'
+app.config['SECRET_KEY'] = 'Something strings'
 
-class NameForm(Form):
-    name = StringField('What is your name?', validators=[Required()])
+class RegForm(Form):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    Password2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password', 'password not match')])
     submit = SubmitField('Submit')
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    name = None
-    form = NameForm()
+@app.route('/reg', methods=['GET', 'POST'])
+def reg():
+    form = RegForm()
     if form.validate_on_submit():
-        name = form.name.data
-        form.name.data = ''
-    return render_template('index.html', form=form, name=name)
+        return 'name:{name}, password:{password}'.format(name=form.username.data, password=form.password.data)
+    return render_template('reg.html', form=form)
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.form['username'] != app.config['USERNAME']:
-        error = 'Invalid username'
-    elif request.form['password'] != app.config['PASSWORD']:
-        error = 'Invalid password'
-    else:
-        session['logged_in'] = True
-        flash('You were logged in')
-    return render_template('login.html', error=errop)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
+

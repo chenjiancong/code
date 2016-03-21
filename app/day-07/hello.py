@@ -24,7 +24,7 @@ def login():
             flash('Wrong Username')
             error = 'Wrong username'
         elif request.form['password'] != app.config['PASSWORD']:
-            flash('Wrong Password')
+            flash('Wrong Password', 'error')
             error = 'Your password is Wrong'
         else:
             session['logged_in'] = True

@@ -14,6 +14,7 @@ setopt AUTO_CD
 
 #Make Tmux use vim-color
 alias tmux='tmux -2'
+alias activate='. venv/bin/activate'
 
 #alias la='ls -A'
 #alias la='ls -A'

@@ -166,3 +166,7 @@ def logout():
 插入flash 消息提示
 from flask import Flask, flash, session, render_template
 from flask.ext.bootstrap import Bootstrap
+
+Day-08
+#  学习使用flask-admin
+pip install flask-admin

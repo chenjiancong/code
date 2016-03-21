@@ -54,5 +54,11 @@ select * from table limit 7,-1;  //搜索7到最后一行
 select * from table limit 7      //搜索前7行
 select * from table limit 0,7    //搜索前7行
 
+#like 模糊查询
+select * from table_na where id like '%123%'
+
+#统计集合
+select count(id) from table_na;
+
 
 
