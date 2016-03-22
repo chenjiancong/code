@@ -42,7 +42,7 @@ def login():
         else:
             session['logged_in'] = True
             flash('You were logged in')
-            return render_template('index.html')
+            return render_template('index.html', name=form.username.data)
     return render_template('login2.html', form = form)
 
 @app.route('/logout')

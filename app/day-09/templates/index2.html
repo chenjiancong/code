@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}Flasky{% endblock %}
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+</div>
+
+<div class="row" style="margin:0;min-height:600px">
+            <div class="jumbotron search-box">
+                <p>请输入关键字：</p>
+                <div class="input-group">
+                    <input placeholder="身份证号"
+                           type="text" name="stu_id" id="keyword" class="form-control">
+                    <span class="input-group-btn scan-but-span">
+                        <button class="btn btn-success" onclick="scan()" type="button">查找一下</button>
+                    </span>
+                </div>
+                <!-- 图片验证码
+                <div class="input-group mt15">
+                <script type="text/javascript" src="http://api.geetest.com/get.php?gt=5002ee13166eb964fdc972f1662803f4"></script>
+                </div>
+                -->
+
+                <div id="scan-result-box">
+                </div>
+            </div>
+
+            <div id="container" class="row" style="hight:280px">
+        </div>
+    </div>
+<script>
+var geetest_passed = true; 
+    var selectorObj; 
+    function gt_custom_ajax(result, selector) {
+        selectorObj=selector;
+        geetest_passed = result;
+    }
+    var keyword = "";
+            function scan(){
+             keyword = $.trim($("#keyword").val());
+                 if(keyword==''){
+                    alert('请输入身份证');
+                    $("#keyword").focus()
+                    return false;
+                 }
+                if(!geetest_passed) { 
+                             alert("请滑动图片进行验证!")
+                                    return false;
+                    } 
+  
+            $.ajax({
+                        type:'get',
+                        dataType:'json',
+                        url:'http://192.168.1.201:5000/scan/'+keyword,
+                        success:function(data){
+
+                        if(!data.stu_id){
+                                alert('恭喜!您的信息没有被泄露!');
+                                return false;
+                            }                    
+                var re="<ul>";
+                    re+="<li>学  号："+data.stu_id+'</li>';
+                    re+="<li>姓  名："+data.name+'</li>';
+                    re+="<li>选修课程号："+data.cla_id+'</li>';
+                    re+="</ul>"
+                    $('#container').html(re)
+                        },
+                        error:function(){
+                            alert('您的信息不存在!')
+                        }
+                    }) 
+                }
+     </script>
+
+{{wtf.quick_form(form)}}
+{% endblock %}

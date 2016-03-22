@@ -211,4 +211,5 @@ def login():
 {% import 'bootstrap/wtf.html' as wtf %}
 {{ wtf.quick_form(form) }}
 
-flask-sqlalchem
+#  flask-sqlalchemy使用
+
