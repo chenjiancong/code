@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}Flask{% endblock %}
+{% block page_content %}
+<div class="page-header">
+<h1>Log In</h1>
+</div>
+{{ wtf.quick_form(form)}}
+<br>
+<p>New user ?  <a href="{{ url_for('reg')}}">Click here to Register</a></p>
+
+  <div class="container">
+
+      <form class="form-signin" method='post' role='form'>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input style=" background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" id="email" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input style=" background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" id="password" class="form-control" placeholder="Password" required="" type="password">
+        <div class="checkbox">
+          <label>
+            <input value="remember-me" type="checkbox", id='remember_me'> Remember me
+          </label>
+        </div>
+        <button class="btn btn-default navbar-btn" type="button", id='submit'>Log In</button>
+      </form>
+
+    </div>
+{% endblock %}

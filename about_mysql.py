@@ -37,7 +37,7 @@ mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 insert into table_na values(...);
 
 删除表中数据
-delete tb_name where id=XXX;
+delete from tb_name where id=XXX;
 
 更新表中数据
 update tb_name set id=new_date where id=old_date;
@@ -60,5 +60,6 @@ select * from table_na where id like '%123%'
 #统计集合
 select count(id) from table_na;
 
-
+#  Create table
+create table Users(id int(10) not null primary key auto_increment,username char(50) not null, password char(50));
 

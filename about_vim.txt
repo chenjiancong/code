@@ -19,3 +19,6 @@ NG 到指定一行
 gg 到首行
 G  到末行
 ^  到行头
+
+vim diff 两个文件比较
+vim -d a.py b.py

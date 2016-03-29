@@ -9,10 +9,9 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 app.config['SECRET_KEY'] = 'SOMETHING STRINGS'
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:cjcdb@localhost/school'
 
-class session(db.Model):
+class Student(db.Model):
     __tablename__ = 'student'
     stu_id = db.Column(db.String(10), primary_key = True)
     name   = db.Column(db.String(10))
@@ -23,31 +22,33 @@ class Scan(Form):
     submit = SubmitField('Submit', validators=[DataRequired()])
 
 
-@app.route('/scan/<stu_id>', methods = ['GET'])
-def scan1(stu_id):
-    result = session.query.filter_by(stu_id=stu_id).first()
-    if result is None:
-        json_result={'stu_id':None}
-        return json.dumps(json_result, ensure_ascii=False)
-    else:
-        json_result = {'stu_id': result.stu_id, 'name': result.name, 'cla_id': result.cla_id}
-        return json.dumps(json_result, ensure_ascii=False)
+#  @app.route('/scan/<stu_id>', methods = ['GET'])
+#  def scan1(stu_id):
+    #  result = session.query.filter_by(stu_id=stu_id).first()
+    #  if result is None:
+        #  json_result={'stu_id':None}
+        #  return json.dumps(json_result, ensure_ascii=False)
+    #  else:
+        #  json_result = {'stu_id': result.stu_id, 'name': result.name, 'cla_id': result.cla_id}
+        #  return json.dumps(json_result, ensure_ascii=False)
 
 @app.route('/', methods =['GET', 'POST'])
 def scan():
+    stu_id = None
     form =  Scan()
     if form.validate_on_submit():
-        result = session.query.filter_by(stu_id=form.stu_id.data).first_or_404()
-        #  return redirect(url_for('show_stu_id'))
-        return 'stu_id is {stu_id}, name:{name}, {cla_id}'.format(stu_id=result.stu_id, name=result.name, cla_id=result.cla_id)
+        result = Student.query.filter_by(stu_id=form.stu_id.data).first_or_404()
+        return render_template('index3.html', stu_id=result.stu_id, name=result.name, cla_id=result.cla_id,form=form)
+        #  return redirect(url_for('id', stu_id=form.stu_id.data))
     return render_template('index3.html', form=form)
 
-@app.route('/s/<stu_id>', methods=['GET'])
-def show_stu_id(stu_id):
-    #  stu_id = session.query.filter_by(stu_id=stu_id).first_or_404()
-    pass
-    #  result = session.query.filter_by(stu_id=stu_id).first()
-    #  return 'stu_id is {stu_id}, name:{name}, {cla_id}'.format(stu_id=result.stu_id, name=result.name, cla_id=result.cla_id)
+@app.route('/id/<stu_id>')
+def id(stu_id):
+    return render_template('id.html', stu_id=stu_id)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug = True)
