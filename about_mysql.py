@@ -15,6 +15,9 @@ show tables;
 创建数据库
 create database db_name;
 
+创建数据表
+create table tb_name;
+
 修改数据库密码
 mysql> set password for 'root'@'localhost'=password('newpass');
 
@@ -48,6 +51,7 @@ update tb_name set id=new_date where id=old_date;
 ERROR 2002
 stemctl start mysqld/mariadb
 
+<<<<<<< HEAD:about_mysql.py
 #limit 指定行业查询
 select * from table limit 7,100; //搜索7-100行记录
 select * from table limit 7,-1;  //搜索7到最后一行
@@ -62,4 +66,12 @@ select count(id) from table_na;
 
 #  Create table
 create table Users(id int(10) not null primary key auto_increment,username char(50) not null, password char(50));
+=======
+# schema.sql使用
+mysql> source schema.sql
+mysql -u yourusername -p yourpassword yourdatabase < schema.sql
+
+python 提示" no module named MySQLdb "
+pip install mysql-python
+>>>>>>> aaacfe2011c8d54dfdeb09476ebc5556314cc3b3:about_mysql.txt
 
