@@ -1,5 +1,0 @@
-aaa
-set mouse=v
-bbb
-cccc
-ddd
