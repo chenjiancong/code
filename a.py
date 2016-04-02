@@ -3,6 +3,4 @@
 
 print 'hello'
 print 'hello world'
-ok
-
 print 'second'
