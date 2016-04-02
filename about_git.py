@@ -41,3 +41,15 @@ git merge branch_name   #合并分支(首先要切换到待合并分支上，然
     ex：要将dev 与 master 合并，需先checkout 到 master 再执行 merge dev)
 git branch -d branch_name   #删除分支
 git push origin :branch_name  #删除远程分支(推送一个空分支)
+
+#  git 每次输入密码
+每次push  的时候，都要输入用户名和密码
+原因是使用了https方式 push
+在termail里边 输入  git remote -v
+可以看到形如一下的返回结果
+origin https://github.com/yourname/demo.git (fetch)
+origin https://github.com/yourname/demo.git (push)
+下面把它换成ssh方式的。
+1. git remote rm origin
+2. git remote add origin git@github.com:yourname/demo.git
+3. git push origin
