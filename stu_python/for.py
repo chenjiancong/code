@@ -22,3 +22,13 @@ for x in range(1,11):
 
 for x in range(1,11):
     print "-------->",x
+
+
+s = 0
+for s in range(1,11):
+    s = s + 1
+    print s
+
+for s in range(1,11):
+    s = s + 1
+print s

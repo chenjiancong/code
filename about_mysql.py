@@ -44,7 +44,7 @@ insert into table_na values(...);
 update table_na set values=xxx where id=xxx;
 =======
 删除表中数据
-delete tb_name where id=XXX;
+delete from tb_name where id=XXX;
 
 更新表中数据
 update tb_name set id=new_date where id=old_date;
@@ -56,10 +56,27 @@ update tb_name set id=new_date where id=old_date;
 ERROR 2002
 stemctl start mysqld/mariadb
 
+<<<<<<< HEAD:about_mysql.txt
 # schema.sql使用
 mysql> source schema.sql
 mysql -u yourusername -p yourpassword yourdatabase < schema.sql
 
 python 提示" no module named MySQLdb "
 pip install mysql-python
+=======
+#limit 指定行业查询
+select * from table limit 7,100; //搜索7-100行记录
+select * from table limit 7,-1;  //搜索7到最后一行
+select * from table limit 7      //搜索前7行
+select * from table limit 0,7    //搜索前7行
+
+#like 模糊查询
+select * from table_na where id like '%123%'
+
+#统计集合
+select count(id) from table_na;
+
+#  Create table
+create table Users(id int(10) not null primary key auto_increment,username char(50) not null, password char(50));
+>>>>>>> centos_work:about_mysql.py
 
