@@ -22,3 +22,6 @@ A
 >>>u'中'
 u'\u432d'
 
+#格式化字符串
+print 'hello,%s'%('jack')
+print 'hello,{name}'.format(name='jack')

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}Flasky{% endblock %}
+{% block page_content %}
+{{wtf.quick_form(form)}}
+<div class="page-header">
+  <h1>{% if stu_id %}Studnet_info, {{stu_id}},{{name}},{{cla_id}}{% else %}{% endif %}</h1>
+</div>
+{% endblock %}

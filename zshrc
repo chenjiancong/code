@@ -14,7 +14,11 @@ setopt AUTO_CD
 
 #Make Tmux use vim-color
 alias tmux='tmux -2'
+# Some alias
+alias activate='. /home/jack/venv/bin/activate'
 
+#alias la='ls -A'
+#alias la='ls -A'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

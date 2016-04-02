@@ -20,6 +20,7 @@ gg 到首行
 G  到末行
 ^  到行头
 
+<<<<<<< HEAD
 #2015.11.30
 http://www.codeceo.com/article/vim-language.html
 
@@ -39,3 +40,7 @@ a   around
 t   to
 f   forward
 
+=======
+vim diff 两个文件比较
+vim -d a.py b.py
+>>>>>>> centos_work
