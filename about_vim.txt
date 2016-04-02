@@ -21,6 +21,15 @@ G  到末行
 ^  到行头
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+vim diff 两个文件比较
+vim -d a.py b.py
+=======
+=======
+>>>>>>> dev
+>>>>>>> master
 #2015.11.30
 http://www.codeceo.com/article/vim-language.html
 
@@ -40,7 +49,14 @@ a   around
 t   to
 f   forward
 
+<<<<<<< HEAD
+>>>>>>> aaacfe2011c8d54dfdeb09476ebc5556314cc3b3
+=======
 =======
 vim diff 两个文件比较
 vim -d a.py b.py
 >>>>>>> centos_work
+<<<<<<< HEAD
+=======
+>>>>>>> dev
+>>>>>>> master

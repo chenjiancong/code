@@ -1,3 +1,12 @@
 #地址打不开,服务未启动
 systemctl start/stop firewalld
 systemctl start mariadb
+
+/* firewalld 开放端口 */
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+--zone 作用域
+--add-port=5000/tcp 端口/协议
+--permanent 永久生效
+
+重启firewalld
+firewall-cmd --reload
