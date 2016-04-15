@@ -1,20 +1,48 @@
-import os
-from flask import Flask, render_template
-from flask.ext.mail import Mail
-from flask.ext.mail import Message
+from flask import Flask,render_template
+from flask.ext.bootstrap import Bootstrap
+from flask.ext.wtf import Form
+from wtforms import StringField, TextAreaField, SubmitField
+from wtforms.validators import Required
+from flask.ext.mail import Mail, Message
+from threading import Thread
 
 app = Flask(__name__)
-mail = Mail(app)
+bootstrap = Bootstrap(app)
+app.config['SECRET_KEY'] = 'SOMETHINGS'
 
-app.config['MAIL_SERVER'] = 'smtp.163.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = 'True'
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config.update(
+#  email settings
+    MAIL_SERVER='smtp.163.com',
+    MAIL_PORT=25,
+    MAIL_USE_SSL=False,
+    MAIL_USERNAME='username',
+    MAIL_PASSWORD='password'
+        )
 
-def send_email():
-    msg = Message('Email Subject', sender="563439568@qq.com",
-                 recipients=['76169288@qq.com'])
-    msg.body = 'Hello New user'
-    msg.html = '<h1>Email model<h1> body'
+mail =Mail(app)
+
+class Send_Form(Form):
+    email = StringField('Recipients Email', validators=[Required()])
+    textarea = TextAreaField('Enter Something', validators=[Required()])
+    submit = SubmitField('Sent')
+
+def send_async_email(msg):
     mail.send(msg)
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = Send_Form()
+    if form.validate_on_submit():
+        msg = Message(subject='Hello',
+                        sender = 'username@163.com',
+                        recipients=[form.email.data])
+        msg.body = 'text body'
+        msg.html = form.textarea.data
+        thr = Thread(target=send_async_email, args=[msg])
+        thr.start()
+        mail.send(msg)
+        return 'OK'
+    return render_template('index1.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

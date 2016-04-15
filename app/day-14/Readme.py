@@ -256,3 +256,16 @@ msg.html = <b>HTML</b>
 #  thr = Thread(target=send_async_email, args=[msg])
 #  thr.start()
 mail.sent(msg)
+
+Day-14
+#  项目结构
+Project_name
+|-app
+ |-templates
+ |-static
+ |-__init__.py
+ |-error.py
+ |-forms.py
+ |-views.py
+|-config.py
+|-run.py

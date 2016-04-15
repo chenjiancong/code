@@ -83,3 +83,9 @@ mysql -u yourusername -p yourpassword yourdatabase < schema.sql
 
 python 提示" no module named MySQLdb "
 pip install mysql-python
+
+#  substring 截取函数
+substring("abcdefg",2,3) ,从第2位开始截取3个字符
+
+#  设置插入中文 charset=utf8
+ ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
