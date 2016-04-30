@@ -12,3 +12,8 @@ def send_email():
     if form.validate_on_submit():
         return 'OK'
     return render_template('send_email.html', form = form)
+
+@app.route('/forms', methods = ['GET', 'POST'])
+def forms():
+    form = About_forms()
+    return render_template('forms.html', form = form)

@@ -25,3 +25,7 @@ u'\u432d'
 #格式化字符串
 print 'hello,%s'%('jack')
 print 'hello,{name}'.format(name='jack')
+
+#  print r'' 表示内部字符串默认不转义
+print '\\\t\\'
+print r'\\\t\\'

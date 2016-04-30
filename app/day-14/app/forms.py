@@ -9,7 +9,9 @@ class Send_email(Form):
     submit = SubmitField('Submit')
 
 class Login(Form):
-    username = StringFild('Username', validators = [Required()])
+    username = StringField('Username', validators = [Required()])
     password = PasswordField('Password', validators = [Required()])
     submit = SubmitField('Submit')
+
+
 
