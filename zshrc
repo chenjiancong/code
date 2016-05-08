@@ -15,7 +15,7 @@ setopt AUTO_CD
 #Make Tmux use vim-color
 alias tmux='tmux -2'
 # Some alias
-alias activate='. /home/jack/venv/bin/activate'
+alias activate='. /home/jack/.venv/bin/activate'
 alias poff='sudo poweroff'
 
 #alias la='ls -A'

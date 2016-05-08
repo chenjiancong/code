@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block page_content%}
+
+<div class="page-header">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{message}}
+  </div>
+  {% endfor %}
+  <h1>Hello, {{name|capitalize}}</h1>
+</div>
+{% endblock%}

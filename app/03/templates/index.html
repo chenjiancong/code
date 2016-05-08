@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Flask{% endblock %}
+{% block page_content %}
+
+<div class="jumbotron jumbotron-fluid">
+{% for entry in entries %}
+  <div class="container">
+    <h1 class="display-3">{{ entry.title }}</h1>
+    <p class="lead">{{ entry.text|safe }}</p>
+  </div>
+  {% else %}
+    <h1 class="display-3">No entries here so far</h1>
+{% endfor %}
+</div>
+
+{% endblock %}
