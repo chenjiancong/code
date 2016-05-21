@@ -2,6 +2,10 @@
 #-*- coding:utf-8 -*-
 #关于git的相关命令
 
+#生成SSH-KEYGEN
+ssh-keygen -t rsa -C "youremail"
+id_rsa.pub 是公钥
+
 #开始配置信息
 git config --global user.name "name"
 git config --global user.email "email@"

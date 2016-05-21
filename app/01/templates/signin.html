@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Sign In{% endblock %}
+{% block page_content %}
+<div class="container">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-warning" role="alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+
+  <form action="{{ url_for('signin') }}" class="form-signin" method="post">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <div class="form-group">
+      <label for="inputUsername">Username</label>
+      <input type="text" name="username" class="form-control"  placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type="password" name="password" class="form-control"  placeholder="Password">
+    </div>
+    <button class="btn btn-lg btn-primary" type="submit">Sign In</button>
+  </form>
+</div>
+{% endblock %}

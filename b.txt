@@ -1,1 +1,9 @@
+<<<<<<< HEAD
+This is CentOS
+=======
+<<<<<<< HEAD
 this is centos
+=======
+This is CentOS
+>>>>>>> dev
+>>>>>>> master
