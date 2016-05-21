@@ -19,10 +19,10 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            {% if not session.logged_in %}
-            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
-            {% else %}
+            {% if session.logged_in %}
             <li><a href="{{ url_for('signout') }}">Sign Out </a></li>
+            {% else %}
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
