@@ -1,10 +1,8 @@
-from flask import Flask
+#!/usr/bin/env python
+# encoding: utf-8
 
-app = Flask(__name__)
+class happyBrid(object):
+    def __init__(self,more_words):
+        print 'We are happy birds.',more_words
 
-@app.route('/')
-def index():
-    return '<h1>Hello</h1>'
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+summer = happyBrid('Happy,Happy')
