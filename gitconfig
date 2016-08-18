@@ -1,4 +1,6 @@
 #.gitconfig放在主目录下
+#~/.gitconfig
+#ln -s ~/code/gitconfig ~/.gitconfig
 [user]
 	name = chenjiancong
 	email = chenjiancong@gmail.com
@@ -7,3 +9,4 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     st = status
+    last = log -1 HEAD
