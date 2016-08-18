@@ -57,3 +57,7 @@ origin https://github.com/yourname/demo.git (push)
 1. git remote rm origin
 2. git remote add origin git@github.com:yourname/demo.git
 3. git push origin
+
+#git alias
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.st status
