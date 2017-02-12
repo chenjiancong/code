@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
  alias activete=". ~/venv/bin/activate"
  alias t="tmux"
  alias update="sudo apt update -y"
+ alias upgrade="sudo apt upgrade -y"
 
 # Tmux 与 Vim 颜色一致
  if [[ $TERM == xterm ]]; then

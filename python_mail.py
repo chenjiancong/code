@@ -27,8 +27,3 @@ server.set_debuglevel(1)
 server.login(from_addr, password)
 server.sendmail(from_addr, [to_addr], msg.as_string())
 server.quit()
-
-def a():
-    print 'hje'
-   ;wq
-   print
