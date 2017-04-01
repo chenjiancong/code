@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
  alias update="sudo apt-get update -y"
  alias upgrade="sudo apt upgrade -y"
 
-# Tmux 与 Vim 颜色一致
+## Tmux 与 Vim 颜色一致
  if [[ $TERM == xterm ]]; then
     TERM=xterm-256color
 fi

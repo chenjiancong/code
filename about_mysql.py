@@ -89,3 +89,10 @@ substring("abcdefg",2,3) ,从第2位开始截取3个字符
 
 #  设置插入中文 charset=utf8
  ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+# 使用 mycli 可以快捷补全命令
+# 安装
+sudo apt install mycli
+# 使用
+mycli -hlocalhost -uroot -ppassword
+
