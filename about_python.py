@@ -2,6 +2,9 @@
 #-*- coding:utf-8 -*-
 #Somethig about python
 
+#显示内置函数(BIF) Build-in funcations
+>>>dir(__builtins__)
+
 #赋值
 '='                   #赋值，先计算右侧的表达式
 EX
