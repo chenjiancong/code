@@ -8,4 +8,3 @@ if 1 <= num <= 100:
     print("对了")
 else:
     print("错了")
-
