@@ -1,0 +1,319 @@
+#!/bin/bash
+
+# 说明：请使用bash命令运行脚本，否则会报错
+
+# 清空终端
+clear
+
+# 构建图形化界面
+GUI=$(zenity --list --checklist \
+  --height="600" \
+  --width="1000" \
+  --title="Elementary OS 快速配置工具" \
+  --text="请从下面列表中选择需要设置或安装的项目" \
+  --column="选择" --column="操作"	--column="描述" \
+  TRUE "更新系统" "更新系统及应用软件包"  \
+  FALSE "安装软件源设置工具" "可以设置系统使用的软件源，安装附加驱动等操作" \
+  FALSE "调整屏幕亮度" "调整屏幕默认亮度为40%，修改此值请在终端执行：xbacklight = 40%, 后面的值为需要设置默认亮度百分比" \
+  FALSE "安装 fcitx 框架" "安装 fcitx 输入法框架，并安装搜狗拼音输入法" \
+  FALSE "安装文泉驿字体套件" "安装文泉驿字体，优化中文显示效果" \
+  FALSE "安装新立得软件包管理器" "新立得是Linux平台的老牌软件包软件工具，支持软件源管理、软件包管理功能" \
+  FALSE "安装 Elementary Tweaks" "用于安装系统主题，进行系统其他配置" \
+  FALSE "安装扩展主题" "包含 mega 图标主题、arc 系统主题、paper 系统主题和图标主题" \
+  FALSE "安装 DVD 支持库" "安装用于播放 DVD 的支持库" \
+  FALSE "安装压缩文件支持库" "安装用于支持zip、rar文件的库及工具" \
+  FALSE "安装受版权保护软件包" "安装受版权保护的软件包（如用于mp3、avi、mpeg的解码器等）" \
+  FALSE "安装 Firefox" "安装火狐浏览器，并卸载系统自带的浏览器" \
+  FALSE "安装 BleachBit 系统清理工具" "可以清理系统缓存垃圾，不建议经常清理，偶尔清理下可以释放磁盘空间" \
+  FALSE "替换计算器" "替换计算器为 Gnome 计算器，自带计算器功能太简单" \
+  FALSE "安装 LibreOffice" "安装 LibreOffice，开源免费的办公软件"\
+  FALSE "安装 Shutter" "强大的截屏软件" \
+  FALSE "安装下载工具" "安装 qBittorrent、uget、aria2" \
+  FALSE "安装 GParted" "硬盘分区编辑软件，可以无损修改分区大小，但建议编辑前做好数据备份" \
+  TRUE "修复损坏的软件包" "修复软件包依赖，修复无法启动的软件包" \
+	TRUE "清理软件包" "删除系统冗余的软件包及清理本地软件包缓存" \
+  --separator="|");
+
+if [[ $GUI ]]
+then
+
+  # 更新系统操作
+  if [[ $GUI == *"更新系统"* ]]
+  then
+    clear
+  	echo "正在更新系统"
+  	echo ""
+  	sudo apt -y update
+  	sudo apt -y full-upgrade
+  fi
+
+  # 安装软件源设置工具操作
+  if [[ $GUI == *"安装软件源设置工具"* ]]
+  then
+  	clear
+  	echo "正在安装软件源设置工具"
+  	echo ""
+  	sudo apt -y install software-properties-common
+  fi
+
+  # 调整屏幕默认亮度操作
+  if [[ $GUI == *"调整屏幕亮度"* ]]
+  then
+  	clear
+  	echo "正在调整屏幕亮度"
+  	echo ""
+    sudo apt -y install xbacklight
+    xbacklight = 40%
+  fi
+
+  # 安装 fcitx 框架操作
+  if [[ $GUI == *"安装 fcitx 框架"* ]]
+  then
+  	clear
+  	echo "正在安装fcitx输入法框架"
+  	echo ""
+    sudo apt install -y fcitx fcitx-table-wubi-large fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config wget
+    clear
+    echo "请在设置向导中选择fcitx为默认输入法框架，第二步请选择“Yes”"
+    echo ""
+    im-config
+  fi
+
+  # 安装文泉驿字体套件操作
+  if [[ $GUI == *"安装文泉驿字体套件"* ]]
+  then
+  	clear
+  	echo "正在安装文泉驿字体套件"
+  	echo ""
+  	sudo apt install -y fonts-wqy-microhei ttf-wqy-microhei
+  fi
+
+  # 安装新立得软件包管理器操作
+  if [[ $GUI == *"安装文泉驿字体套件"* ]]
+  then
+  	clear
+  	echo "正在安装新立得软件包管理器"
+  	echo ""
+  	sudo apt install -y synaptic
+  fi
+
+  # 安装 Elementary Tweaks 操作
+  if [[ $GUI == *"安装 Elementary Tweaks"* ]]
+  then
+  	clear
+  	echo "正在安装 Elementary Tweaks"
+  	echo ""
+  	sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
+  	sudo apt update
+  	sudo apt -y install elementary-tweaks
+  fi
+
+  # 安装扩展主题操作
+  if [[ $GUI == *"安装扩展主题"* ]]
+  then
+  	clear
+  	echo "正在安装 Elementary Full 图标主题"
+  	echo ""
+  	sudo apt -y install git
+  	git clone https://github.com/btd1337/elementary-full-icon-theme
+  	sudo mv elementary-full-icon-theme /usr/share/icons/
+  	gsettings set org.gnome.desktop.interface icon-theme "elementary-full-icon-theme"
+  	sudo rm -rf elementary-full-icon-theme
+    clear
+    echo "正在安装 Arc 主题"
+    echo ""
+    sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+    sudo apt-key adv --recv-keys --keyserver keyserver.Ubuntu.com BEB6D886
+    sudo apt update
+    sudo apt -y install arc-theme
+    clear
+    echo "正在安装 Paper 主题"
+    echo ""
+    sudo add-apt-repository -y ppa:snwh/pulp
+    sudo apt update
+    sudo apt install -y paper-gtk-theme paper-icon-theme
+  fi
+
+
+  # 安装压缩文件支持库操作
+  if [[ $GUI == *"安装压缩文件支持库"* ]]
+  then
+  	clear
+  	echo "正在安装压缩文件支持库"
+  	echo ""
+  	sudo apt -y install zip unzip p7zip p7zip-rar rar unrar
+  fi
+
+  # 安装受版权保护软件包操作
+  if [[ $GUI == *"安装受版权保护软件包"* ]]
+  then
+  	clear
+  	echo "正在安装受版权保护软件包"
+  	echo ""
+  	sudo apt -y install ubuntu-restricted-extras
+  fi
+
+  	clear
+  	echo "正在卸载系统自带浏览器"
+  	echo ""
+    sudo apt remove --purge epiphany-browser epiphany-browser-data -y
+  fi
+
+  # 安装火狐浏览器操作
+  if [[ $GUI == *"安装 Firefox"* ]]
+  then
+  	clear
+  	echo "正在安装火狐浏览器"
+  	echo ""
+  	sudo apt -y install firefox
+    clear
+  	echo "正在卸载系统自带浏览器"
+  	echo ""
+    sudo apt remove --purge epiphany-browser epiphany-browser-data -y
+  fi
+
+  #oh-my-zsh
+sudo apt -y install git
+wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+
+  # 安装 BleachBit 系统清理工具操作
+  if [[ $GUI == *"安装 BleachBit 系统清理工具"* ]]
+  then
+  	clear
+  	echo "正在安装BleachBit系统清理工具"
+  	echo ""
+  	sudo apt -y install bleachbit
+  fi
+
+
+  # 替换计算器操作
+  if [[ $GUI == *"替换计算器"* ]]
+  then
+    clear
+    echo "正在安装Gnome计算器"
+    echo ""
+    sudo apt -y install gnome-calculator
+    clear
+    echo "正在卸载自带计算器"
+    echo ""
+    sudo apt -y remove --purge pantheon-calculator
+  fi
+
+
+  # 安装 LibreOffice 操作
+  if [[ $GUI == *"安装 LibreOffice"* ]]
+  then
+    clear
+    echo "正在安装LibreOffice"
+    echo ""
+    sudo apt -y install libreoffice
+  fi
+
+
+  # 安装 Shutter 操作
+  if [[ $GUI == *"安装 Shutter"* ]]
+  then
+    clear
+    echo "正在Shutter"
+    echo ""
+    sudo apt -y install shutter
+  fi
+
+
+  # 安装下载工具操作
+  if [[ $GUI == *"安装下载工具"* ]]
+  then
+    clear
+  	echo "正在安装uget"
+  	echo ""
+  	sudo apt -y install uget
+    clear
+  	echo "正在安装aria2"
+  	echo ""
+    sudo apt -y install aria2
+  fi
+
+  # 安装 GParted 操作
+  if [[ $GUI == *"安装 GParted"* ]]
+  then
+  	clear
+  	echo "正在安装GParted"
+  	echo ""
+  	sudo apt -y install gparted
+  fi
+
+  # 修复损坏的软件包操作
+  if [[ $GUI == *"修复损坏的软件包"* ]]
+  then
+  	clear
+  	echo "正在修复损坏的软件包"
+  	echo ""
+  	sudo apt -y -f install
+  fi
+
+  # pyenv
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+
+  # tilda 下拉 terminal
+sudo apt -y install tilda
+
+  # arc-theme
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install arc-theme 
+
+  # numix-icon-theme-circle 
+sudo apt-add-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-icon-theme-circle
+
+  # variety 壁纸自动切换软件
+sudo apt -y install variety
+
+  # powerline-font
+git clone https://github.com/powerline/fonts.git
+  # install 
+cd  fonts
+./install.sh
+
+  # htom
+sudo apt -y install htop
+
+  # nvidia
+sudo vim /etc/modprobe.d/blacklist.conf
+最后一行增加
+blacklist nouveau
+
+sudo apt search nvidia
+安装最新版
+sudo apt install -y nvidia-376 nvidia-prime
+
+  # pip
+sudo apt -y install python-pip
+
+  # 安装steam
+sudo add-apt-repository multiverse
+sudo apt update
+sudo apt install steam
+
+  # 清理软件包操作
+  if [[ $GUI == *"清理软件包"* ]]
+  then
+  	clear
+  	echo "正在清理软件包"
+  	echo ""
+  	sudo apt -y autoremove
+  	sudo apt -y autoclean
+  fi
+
+  # 完成通知
+  clear
+  echo "配置完成，部分配置重启后生效。"
+  echo '-----------------------------------------------------------------------------'
+  echo '制作：随風   QQ：326672861   邮箱：mail@lianghongbo.com   官网：http://lianghongbo.cn'
+  echo 'ElementaryOS QQ群：142186807'
+  echo '-----------------------------------------------------------------------------'
+  notify-send -i utilities-terminal ElementartOS快速配置工具 "配置完成，部分配置重启后生效。"
+
+
+fi
