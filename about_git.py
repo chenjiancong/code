@@ -29,6 +29,7 @@ git reset --hard HEAD^(commit_id)   #退回之前版本
 #远程相关命令
 git remote add origin git@github.com:name/project.git               #添加远程主机
 git clone git@github.com:name.com/project.git   #克隆项目
+git push -u origin master  #首次推送加上 -u 使本地与远程分支关联起来
 git pull origin <remote> <remote_branch_name>:<local_branch_name>   #取回远程的某个分支到本地并合并
                                                                     #相当先执行fetch,再执行merge
 #取远程分支作为本地新分支
