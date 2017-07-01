@@ -79,6 +79,15 @@ then
     im-config
   fi
 
+  # 安装 fcitx-rime
+  sudo apt install -y fcitx-rime
+  cp /usr/share/rime-data/wubi86.schema.yaml ~/.config/fcitx/rime/
+  ln -s /usr/share/rime-data/wubi86.dict.yaml ~/.config/fcitx/rime/
+  ln -s /usr/share/rime-data/wubi86.* ~/.config/fcitx/rime/
+
+  vim ~/.config/fcitx/rime/detault.yaml
+  # schema_list下加一行:
+  - schema:wubi86
   # 安装文泉驿字体套件操作
   if [[ $GUI == *"安装文泉驿字体套件"* ]]
   then

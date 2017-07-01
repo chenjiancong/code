@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
  alias upgrade="sudo apt upgrade -y"
  alias autormove="sudo apt autoremove"
  alias list="apt list --upgradable"
+ alias vimrc="vim ~/.vimrc"
 
 # rm
 alias rm="trash"
