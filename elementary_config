@@ -97,6 +97,9 @@ then
   	sudo apt install -y fonts-wqy-microhei ttf-wqy-microhei
   fi
 
+  # steam 字体包(解决字体方块)
+  sudo apt install -y fonts-wqy-zenhei
+
   # 安装新立得软件包管理器操作
   if [[ $GUI == *"安装文泉驿字体套件"* ]]
   then
