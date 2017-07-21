@@ -11,3 +11,5 @@
     st = status
     last = log -1 HEAD
     all = git add --all
+    pull = git pull origin master
+    push = git push origin master
