@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+
+while True:
+    number = int(input("输入数值"))
+    if number != 'q':
+        print(number)
+    else:
+        number = False
+        print("END")
+
+
