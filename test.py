@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def calc(*numbers):
-    sum = 0
-    for n in numbers:
-        sum = sum + n * n
-    return sum
+def worker(a, b, c):
+    x = a + b
+    y = x * c
+    return y
 
-print(calc(1,2))
+result = worker(1, 2, 3)
+print(result)
+
