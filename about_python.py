@@ -76,3 +76,10 @@ def name():
 
 #  222
 #  jack
+
+算法：
+a + b + c + ...
+sum = 0
+for i in numbers:
+    sum = sum + i
+    return sum

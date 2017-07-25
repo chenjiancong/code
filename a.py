@@ -8,3 +8,4 @@ def calc(*numbers):
     return sum
 
 print(calc(1,3,2))
+
