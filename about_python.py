@@ -39,6 +39,35 @@ s.lower()        #大写字母转换成小写字母
 s.capitalize()   #首字母转换成大写，其余小写
 s.title()        #每个单词首字母大写，其余小写
 
+# list,tuple,dict,set
+# list 1,元素可变;2,查找和插入时间随元素增加而增加；3,占内存小
+classmates = ['Tom', 'Jack', 'Marry']
+# 末尾追加元素
+classmates.append('Adam')
+# 插入到指定位置
+classmates.insert(1,'Peter')
+# 删除指定元素 i为索引位置
+classmates.pop(i)
+
+# tuple
+t = ('a', 'b', 'c')
+
+# dic 1,查找和插入速度快，不随key增加而变慢；2,需求占用大量内存;3,dict的key必须是不可变
+name = {'Tom':98, 'Jack':89, 'Marry':79}
+# 显示Jack成绩
+name['Jack']
+
+# 修改成绩
+name['Tom'] = 77
+
+# 删除 pop(key)
+name.pop('Marry')
+
+# set 重复元素自动过滤
+s = set([1, 1, 2, 3, 3])
+>>s
+{1,2,3}
+
 #  迭代 d
 d = {'Tom':90,'Merry':79,'Jack':89}
 for values in d.itervalues():
@@ -81,5 +110,6 @@ def name():
 a + b + c + ...
 sum = 0
 for i in numbers:
-    sum = sum + i
-    return sum
+#    sum = sum + i
+    sum += i
+return sum
