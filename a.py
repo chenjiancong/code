@@ -4,8 +4,7 @@
 def calc(*numbers):
     sum = 0
     for i in numbers:
-        sum  = sum + i
+        sum += i
     return sum
 
-print(calc(1,3,2))
-
+print(calc(1,2))
