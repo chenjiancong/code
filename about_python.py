@@ -80,6 +80,14 @@ for name, values in d.iteritems():
 for i, values in enumerate(['A', 'B', 'C']):
     print i, values
 
+# 函数参数
+# 默认参数必须指向不变对象
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+
 #  map, reduce 区别
 map(f(x), range(10))
 reduce(f(x, y), range(10))
