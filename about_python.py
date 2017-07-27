@@ -93,6 +93,9 @@ map(f(x), range(10))
 reduce(f(x, y), range(10))
 map里的函数只接收1个参数, reduce函数里必须接收2个参数
 
+# Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
+
+
 #  Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
 #  装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
 例如打印名称
