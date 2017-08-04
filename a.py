@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def calc(*numbers):
-    sum = 0
-    for i in numbers:
-        sum += i
-    return sum
+class Foo:
+    def Bar(self):
+        print('Bar')
+    def Hello(self, name):
+        print('i am %s' %name)
 
-print(calc(1,2))
+obj = Foo()
+obj.Bar()
+obj.Hello('Jack')

@@ -124,3 +124,26 @@ for i in numbers:
 #    sum = sum + i
     sum += i
 return sum
+
+# 2017.08.04
+'''
+面向过程:根据业务逻辑从上向下写代码
+函数式:将功能代码封装到函数中,日后开发无需重复编写
+面向对象:对函数进行分类和封装.  类和对象的使用
+类就是一个模板,模板里包含多个函数,函数实现一些功能;
+对象则是根据模板创建的实例,通过实例对象执行类中的函数
+类中的函数,第一个参数必须是 self;类中定义的函数叫 '方法'
+'''
+# 创建类
+class Foo:
+
+    def Bar(self):
+        print('Bar')
+
+    def Hello(self, name):
+        print('i am %s' %name)
+
+obj = Foo()
+obj.Bar()
+obj.Hello('Jack')
+
