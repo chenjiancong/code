@@ -154,3 +154,19 @@ obj = Foo()
 obj.Bar()
 obj.Hello('Jack')
 
+# 封装
+class Foo:
+    def __init__(self, name, age):
+        self.name = name
+        self.age  = age
+
+obj1 = Foo('Tom', 18)
+obj2 = Foo('Jack', 20)
+
+# 2017.08.05
+# format格式化字符串
+1,不需要理会数据类型
+2,填充方式灵活
+print('hello {0}'.format('world'))
+print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
+print('hello {name1}'.format(name1='jack'))
