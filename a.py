@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-class Foo:
-    def Bar(self):
-        print('Bar')
-    def Hello(self, name):
-        print('i am %s' %name)
+class Foo(object):
+    def __init__(self, name):
+        self.name = name
 
-obj = Foo()
-obj.Bar()
-obj.Hello('Jack')
+    def Hello(self):
+        print('hello,{}'.format(self.name))
+
+obj = Foo('tom')
+obj.Hello()
