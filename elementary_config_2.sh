@@ -102,6 +102,10 @@ case $confirm in
     echo ""
     sudo apt -y install aria2
 
+  echo "正在安装Shotwell"
+    echo ""
+    sudo apt install -y shotwell
+
   echo "正在安装GParted"
     echo ""
     sudo apt -y install gparted
@@ -149,6 +153,13 @@ case $confirm in
 
   echo 'pip install'
     sudo apt -y install python-pip
+
+  echo 'eOS 与 window 相差8小时'
+    sudo apt install -y ntpdate
+    sudo ntpdate time.windows.com
+
+    时间更新到硬件上:
+    sudo hwclock --localtime --systohc
 
   echo '安装steam'
     sudo add-apt-repository multiverse

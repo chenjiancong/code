@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+<<<<<<< HEAD
 
 class Foo:
     def __init__(self, name, age):
@@ -25,3 +26,14 @@ class Foo:
 # 间接调用
 obj1 = Foo('Tom', 18)
 obj1.detail()
+=======
+class Foo(object):
+    def __init__(self, name):
+        self.name = name
+
+    def Hello(self):
+        print('hello,{}'.format(self.name))
+
+obj = Foo('tom')
+obj.Hello()
+>>>>>>> dd270fb97fea2d5161417be680ef66022fbea70e
