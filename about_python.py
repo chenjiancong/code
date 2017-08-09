@@ -198,6 +198,23 @@ class Foo:
 obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
+# 2017.08.09
+# 继承
+class Animal(object):
+    pass
+
+class Dog(Animal):
+    pass
+
+# 多态
+class Animal(object):
+    def run_twice(animal):
+        animal.run()
+
+class Dog(Animal):
+    def run(self):
+        print('Dog is running...')
+
 # 2017.08.05
 # format格式化字符串
 1,不需要理会数据类型
