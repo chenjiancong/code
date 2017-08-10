@@ -1,9 +1,9 @@
 #Filename: about_python.txt
 #-*- coding:utf-8 -*-
-#Somethig about python
+# Somethig about python
 
-#From: http://www.cnblogs.com/wanpython/archive/2010/08/07/1794598.html
-
+# Time
+# From: http://www.cnblogs.com/wanpython/archive/2010/08/07/1794598.html
 time.strftime('%Y-%m-%d',time.localtime(time.time()))
 example: 2010-07-19
 
@@ -68,11 +68,6 @@ print 'hello,{name}'.format(name='jack')
 print '\\\t\\'
 print r'\\\t\\'
 
-#大小写转换
-s.upper()        #小写字母转换成大写字母
-s.lower()        #大写字母转换成小写字母
-s.capitalize()   #首字母转换成大写，其余小写
-s.title()        #每个单词首字母大写，其余小写
 
 # list,tuple,dict,set
 # list 1,元素可变;2,查找和插入时间随元素增加而增加；3,占内存小
@@ -98,7 +93,7 @@ name['Tom'] = 77
 # 删除 pop(key)
 name.pop('Marry')
 
-# set 重复元素自动过滤
+# set 重复元素自动过滤重复值
 s = set([1, 1, 2, 3, 3])
 >>s
 {1,2,3}
@@ -123,16 +118,51 @@ def add_end(L=None):
     L.append('END')
     return L
 
+
+# 2017.08.10 函数式编程
+# lambda 匿名函数
+add = lambda a, b: a + b
+print(add(2, 3))
+
+# map 映射
+map(func, *iterables)
+map(len, ['a', 'aa'])
+
+# reduce 迭代
+from functools import reduce # 使用前要导入
+reduce(lambda a, b: a + b, [1, 2])
+
 #  map, reduce 区别
 map(f(x), range(10))
 reduce(f(x, y), range(10))
 map里的函数只接收1个参数, reduce函数里必须接收2个参数
 
+# filter 过滤
+filter(func or None, iterator)
+
+# sorted 排序
+sorted(iterator, func or None) # 默认升序排列, 降序 reverse = True
+sorted([-1,1,-2], key=abs)
+
+# sort 与 sorted 区别: sort是在原位重新排列列表,sorted()是产生一个新列表
+l = [1,0,-1,2]
+l.sort()
+sroted(l)
+
+# 关于大小写转换
+s.upper()        #小写字母转换成大写字母
+s.lower()        #大写字母转换成小写字母
+s.capitalize()   #首字母转换成大写，其余小写
+s.title()        #每个单词首字母大写，其余小写
+
+# find() index()
+info = 'abcd'
+print(info.find('a')) # 如果有就返回 0, 没有返回 -1
+print(info.index('a')) # 如果有就返回 0, 没有返回报错
+
 # Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
-
-
-#  Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
-#  装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
+# Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
+# 装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
 例如打印名称
 def name():
     print 'jack'
@@ -198,6 +228,23 @@ class Foo:
 obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
+# 2017.08.09
+# 继承
+class Animal(object):
+    pass
+
+class Dog(Animal):
+    pass
+
+# 多态
+class Animal(object):
+    def run_twice(animal):
+        animal.run()
+
+class Dog(Animal):
+    def run(self):
+        print('Dog is running...')
+
 # 2017.08.05
 # format格式化字符串
 1,不需要理会数据类型
@@ -205,3 +252,5 @@ obj2 = Foo('Jack', 20)
 print('hello {0}'.format('world'))
 print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
 print('hello {name1}'.format(name1='jack'))
+
+

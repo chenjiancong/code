@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
+# 类的多态
 
 class Animal(object):
     def run(self):
         print('Animal is running...')
 
     def run_twice(animal):
+        animal.run()
         animal.run()
 
 class Dog(Animal):
@@ -29,4 +31,3 @@ cat.run_twice()
 
 tortoise = Tortoise()
 tortoise.run_twice()
-tortoise.run()
