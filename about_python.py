@@ -175,7 +175,7 @@ return sum
 4,面向对象三大特性: 封装 继承 多态
 '''
 # 创建类
-class Foo:
+class Foo(object):
 
     # 创建类中的函数
     def Bar(self):
