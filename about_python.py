@@ -160,6 +160,11 @@ info = 'abcd'
 print(info.find('a')) # 如果有就返回 0, 没有返回 -1
 print(info.index('a')) # 如果有就返回 0, 没有返回报错
 
+# 2017.08.11
+带括号与不带括号的区别
+带括号指的是返回结果
+不带括号是执行函数
+
 # Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
 # Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
 # 装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
@@ -202,7 +207,8 @@ return sum
 1,class 类就是一个模板,模板里包含多个函数,函数实现一些功能;
 2,对象则是根据模板创建的实例,通过实例对象执行类中的函数
 3,类中的函数,第一个参数必须是 self;类中定义的函数叫 '方法'
-4,面向对象三大特性: 封装 继承 多态
+4,类的特性: 封装 继承 多态
+5,类的成员: 字段 方法 属性
 '''
 # 创建类
 class Foo(object):
@@ -244,6 +250,7 @@ class Animal(object):
 class Dog(Animal):
     def run(self):
         print('Dog is running...')
+
 
 # 2017.08.05
 # format格式化字符串
