@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def count():
-    fs = []
-    for i in range(1, 4):
-        def f():
-            return i*i
-        fs.append(f)
-    return fs
+def adda(number):
+    def addb(number_in):
+        print('number_in:',number_in)
+        return number + number_in
+    return addb
 
-f1 = count()
+v1=adda(1)
+print(v1(100))
