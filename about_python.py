@@ -260,4 +260,7 @@ print('hello {0}'.format('world'))
 print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
 print('hello {name1}'.format(name1='jack'))
 
-
+# 2017.08.14
+# 查询类型
+type()
+isinstance('a', str)

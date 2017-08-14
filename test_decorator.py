@@ -3,13 +3,13 @@
 
 def log(func):
     def wrapper(*args, **kw):
-        print('call {}:'.format(func.__name__))
+        print('call {}'.format(func.__name__))
         return func(*args, **kw)
     return wrapper
 
-#@log
+@log
 def now():
-    print('20170811')
+    print('2017-08-12')
 
-f = now()
-f
+f = now
+f()
