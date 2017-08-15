@@ -210,6 +210,9 @@ return sum
 4,类的特性: 封装 继承 多态
 5,类的成员: 字段 方法 属性
 '''
+# 命名约定: 1,大写方法名称的首字母;2,使用一个唯一的小字符串作为数据属性名称前缀
+
+
 # 创建类
 class Foo(object):
 
@@ -251,6 +254,28 @@ class Dog(Animal):
     def run(self):
         print('Dog is running...')
 
+# 2017.08.15
+# __slots__ 限制实例属性;优化内存(但不利于代码维护)
+# 仅对当前类实例起作用,对继承的子类不起作用
+class Student(object):
+    __slots__ = ('name', 'age') # 用tuple 定义允许绑定的属性名称(允许修改的属性)
+
+# @property 将方法变成属性,限制访问
+
+# I/O 读取
+# with ... as ... 自动调用close()
+# read 读
+>> with open('path', 'r') as f
+    print(f.read())
+
+# read 写
+>> with open('path', 'w') as f:
+    f.write('hello world')
+
+# read() 一次读取全部内容;
+# read(size) 每次最多读取size个字节
+# readline() 每次读取一行内容
+# readlines() 一次读取所有内容并按行返回list
 
 # 2017.08.05
 # format格式化字符串
@@ -262,5 +287,5 @@ print('hello {name1}'.format(name1='jack'))
 
 # 2017.08.14
 # 查询类型
-type()
+type('a')
 isinstance('a', str)
