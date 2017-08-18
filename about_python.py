@@ -68,8 +68,14 @@ print 'hello,{name}'.format(name='jack')
 print '\\\t\\'
 print r'\\\t\\'
 
+# 2017.08.05 About format格式化字符串
+1,不需要理会数据类型
+2,填充方式灵活
+print('hello {0}'.format('world'))
+print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
+print('hello {name1}'.format(name1='jack'))
 
-# list,tuple,dict,set
+# About list,tuple,dict,set
 # list 1,元素可变;2,查找和插入时间随元素增加而增加；3,占内存小
 classmates = ['Tom', 'Jack', 'Marry']
 # 末尾追加元素
@@ -109,6 +115,7 @@ for name, values in d.iteritems():
 #  list迭代
 for i, values in enumerate(['A', 'B', 'C']):
     print i, values
+
 
 # 函数参数
 # 默认参数必须指向不变对象
@@ -160,8 +167,8 @@ info = 'abcd'
 print(info.find('a')) # 如果有就返回 0, 没有返回 -1
 print(info.index('a')) # 如果有就返回 0, 没有返回报错
 
-# 2017.08.11
-带括号与不带括号的区别
+# 2017.08.11 About 函数带括号与不带括号的区别
+带括号与不带括号的区别:
 带括号指的是返回结果
 不带括号是执行函数
 
@@ -196,7 +203,7 @@ for i in numbers:
     sum += i
 return sum
 
-# 2017.08.04
+# 2017.08.04 About OOP 面向对象编程
 '''
 # 面向对象编程 Object Oriented Programming
 面向过程:根据业务逻辑从上向下写代码
@@ -238,8 +245,8 @@ class Foo:
 obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
-# 2017.08.09
-# 继承
+# 2017.08.09 About 继承
+
 class Animal(object):
     pass
 
@@ -278,13 +285,6 @@ class Student(object):
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
 
-# 2017.08.05
-# format格式化字符串
-1,不需要理会数据类型
-2,填充方式灵活
-print('hello {0}'.format('world'))
-print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
-print('hello {name1}'.format(name1='jack'))
 
 # 2017.08.14
 # 查询类型
