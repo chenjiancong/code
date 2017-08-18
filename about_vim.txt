@@ -41,3 +41,16 @@ i   inside
 a   around
 t   to
 f   forward
+
+" 允许折叠
+set foldenable
+" 标志折叠
+set foldmethod=marker
+" 折叠标志，这个是默认的
+set foldmarker={{{,}}}
+" 折叠位宽
+set foldcolumn=2
+
+au BufWinLeave * silent mkview
+au BufWinEnter * silent loadview
+
