@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 # Somethig about python
 
-# Time
+# About Time
 # From: http://www.cnblogs.com/wanpython/archive/2010/08/07/1794598.html
 time.strftime('%Y-%m-%d',time.localtime(time.time()))
 example: 2010-07-19
@@ -79,10 +79,11 @@ classmates.insert(1,'Peter')
 # 删除指定元素 i为索引位置
 classmates.pop(i)
 
+
 # tuple
 t = ('a', 'b', 'c')
 
-# dic 1,查找和插入速度快，不随key增加而变慢；2,需求占用大量内存;3,dict的key必须是不可变
+# dic 1,查找和插入速度快，不随key增加而变慢；2,需要占用大量内存;3,dict的key必须是不可变
 name = {'Tom':98, 'Jack':89, 'Marry':79}
 # 显示Jack成绩
 name['Jack']
