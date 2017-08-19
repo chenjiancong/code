@@ -40,7 +40,7 @@ python中时间日期格式化符号：
 #显示内置函数(BIF) Build-in funcations
 >>>dir(__builtins__)
 
-#赋值
+# About 赋值
 '='                   #赋值，先计算右侧的表达式
 EX
 a = 'ABC'
@@ -59,10 +59,6 @@ A
 中文
 >>>u'中'
 u'\u432d'
-
-#格式化字符串
-print 'hello,%s'%('jack')
-print 'hello,{name}'.format(name='jack')
 
 #  print r'' 表示内部字符串默认不转义
 print '\\\t\\'
@@ -84,7 +80,6 @@ classmates.append('Adam')
 classmates.insert(1,'Peter')
 # 删除指定元素 i为索引位置
 classmates.pop(i)
-
 
 # tuple
 t = ('a', 'b', 'c')
@@ -118,7 +113,8 @@ for i, values in enumerate(['A', 'B', 'C']):
     print i, values
 
 
-# 函数参数
+# About 函数参数
+# 参数的顺序：必选参数、默认参数、可变参数、关键字参数
 # 默认参数必须指向不变对象
 def add_end(L=None):
     if L is None:
@@ -126,6 +122,26 @@ def add_end(L=None):
     L.append('END')
     return L
 
+# 2017.08.19
+# *args, 可变参数,可以传入任意个参数，包括0个参数
+# *args 参数args 接收到的是tuple
+def func1(*args):
+    for i in args:
+        print(i)
+
+# **kw，关键字参数,允许传入0或任意个参数，参数将自动组装成dict
+def person(name, age, **kw):
+    print(name, age, kw)
+p = person('tom', 10, city=BJ)
+# 限制关键字参数的名字
+# 1,使用 * 分隔；2,如果前面有可变参数*args,可以不用*;3,可以添加默认参数
+def person1(name, age, *, city):
+    print(name, age, city)
+p1 = persion1('aa', 10, city='BJ')
+
+def person22(name, age, *, city='GZ'):
+    print(name, age, city)
+p2 = persion2('aa', 10)
 
 # 2017.08.10 函数式编程
 # lambda 匿名函数
@@ -169,9 +185,8 @@ print(info.find('a')) # 如果有就返回 0, 没有返回 -1
 print(info.index('a')) # 如果有就返回 0, 没有返回报错
 
 # 2017.08.11 About 函数带括号与不带括号的区别
-带括号与不带括号的区别:
-带括号指的是返回结果
-不带括号是执行函数
+#带括号指的是返回结果
+#不带括号是执行函数
 
 # Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
 
@@ -246,7 +261,8 @@ class Foo:
 obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
-# 2017.08.09 About 继承
+# 2017.08.09 About 继承、多态
+# 继承
 
 class Animal(object):
     pass
@@ -285,7 +301,6 @@ class Student(object):
 # read(size) 每次最多读取size个字节
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
-
 
 # 2017.08.14
 # 查询类型

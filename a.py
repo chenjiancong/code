@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def sum(a, b):
-    total = a + b
-    print("函数内：", total)
-    return total
+def func1(*args):
+    def func2(number):
+        sum = 0
+        for i in args:
+            sum += i
+    return func2
 
-aa = sum(3,4)
-print("函数外：",aa)
+n = func1(1,2)
+print(n())
+
