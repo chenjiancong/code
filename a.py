@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-class Student(object):
-    school = 'GZ_School'
-    def f(self):
-        return 'hello'
+def sum(a, b):
+    total = a + b
+    print("函数内：", total)
+    return total
 
-t = Student()
-print(t.school)
-print(t.f())
+aa = sum(3,4)
+print("函数外：",aa)
