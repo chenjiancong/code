@@ -1,13 +1,18 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def func1(*args):
-    def func2(number):
-        sum = 0
-        for i in args:
-            sum += i
-    return func2
+def addEnd(L = None):
+    if L == None:
+        L = []
+    L.append('End')
+    return L
 
-n = func1(1,2)
-print(n())
+a=addEnd([])
+print(a)
 
+def gensquares(n):
+    for i in range(n):
+        yield i ** 2
+
+for item in gensquares(5):
+    print(item)

@@ -95,23 +95,31 @@ name['Tom'] = 77
 # 删除 pop(key)
 name.pop('Marry')
 
+# 字典的遍历
+d = {'Tom':80, 'Jack':66}
+# key, values的遍历
+for key, value in d.items()
+    print(key, value)
+
+# 仅values的遍历
+for value in d.values():
+    print(value)
+
 # set 重复元素自动过滤重复值
 s = set([1, 1, 2, 3, 3])
 >>s
 {1,2,3}
 
-#  迭代 d
-d = {'Tom':90,'Merry':79,'Jack':89}
-for values in d.itervalues():
-    print values
-
-for name, values in d.iteritems():
-    print name, values
-
-#  list迭代
+#  list遍历, enumerate,将下标循环出来
 for i, values in enumerate(['A', 'B', 'C']):
     print i, values
+0 A
+1 B
+2 C
 
+# 2017.08.20 迭代与遍历的区别
+# 迭代时数据可以是未生成的；
+# 遍历时数据已经钦定
 
 # About 函数参数
 # 参数的顺序：必选参数、默认参数、可变参数、关键字参数
@@ -121,6 +129,9 @@ def add_end(L=None):
         L = []
     L.append('END')
     return L
+
+# is 与 == 的区别
+# is拿id作为判断因素； == 拿 value 作为判断因素
 
 # 2017.08.19
 # *args, 可变参数,可以传入任意个参数，包括0个参数
@@ -161,12 +172,18 @@ map(f(x), range(10))
 reduce(f(x, y), range(10))
 map里的函数只接收1个参数, reduce函数里必须接收2个参数
 
+# map, reduce 在python3里的延迟计算,变成生成器，需要时才生成。所以用list或用for查看生成
+# 可以简单把map,reduce的返回值看成是一个集合
+# map,reduce --> list
+
+
 # filter 过滤
 filter(func or None, iterator)
 
 # sorted 排序
 sorted(iterator, func or None) # 默认升序排列, 降序 reverse = True
 sorted([-1,1,-2], key=abs)
+
 
 # sort 与 sorted 区别: sort是在原位重新排列列表,sorted()是产生一个新列表
 l = [1,0,-1,2]
@@ -287,7 +304,7 @@ class Student(object):
 
 # @property 将方法变成属性,限制访问
 
-# I/O 读取
+# About I/O 读取
 # with ... as ... 自动调用close()
 # read 读
 >> with open('path', 'r') as f

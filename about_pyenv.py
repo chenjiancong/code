@@ -12,3 +12,6 @@ pyenv rehash
 
 # 切换shell
 pyenv shell 3.5.3
+
+# 设置global
+pyenv global 3.5.3
