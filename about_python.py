@@ -121,6 +121,19 @@ for i, values in enumerate(['A', 'B', 'C']):
 # 迭代时数据可以是未生成的；
 # 遍历时数据已经钦定
 
+# 2017.08.21 判断一个对象能否迭代
+isinstance('abc', Iterable) >>> True
+isinstance(123, Iterable) >>> False
+
+# Generator 生成器
+# 列表元素按算法推导，一边循环一边计算，称为生成器: generator
+# 只需求将列表生成式(List Comprehensions)的[]改为()，就创建了 generator
+# 列表生成式 L = [x * x for x in range(10)]
+ generator  g = (x * x for x in range(10))
+# 调用的算法可以是next(g),或者用for
+for n in g:
+    print(n)
+
 # About 函数参数
 # 参数的顺序：必选参数、默认参数、可变参数、关键字参数
 # 默认参数必须指向不变对象
@@ -128,6 +141,13 @@ def add_end(L=None):
     if L is None:
         L = []
     L.append('END')
+    return L
+# 2017.08.21 另一种写法
+def func1(*args):
+    L = list(args)
+    if L == None:
+        L = []
+        L.append('End')
     return L
 
 # is 与 == 的区别
@@ -176,14 +196,12 @@ map里的函数只接收1个参数, reduce函数里必须接收2个参数
 # 可以简单把map,reduce的返回值看成是一个集合
 # map,reduce --> list
 
-
 # filter 过滤
 filter(func or None, iterator)
 
 # sorted 排序
 sorted(iterator, func or None) # 默认升序排列, 降序 reverse = True
 sorted([-1,1,-2], key=abs)
-
 
 # sort 与 sorted 区别: sort是在原位重新排列列表,sorted()是产生一个新列表
 l = [1,0,-1,2]
@@ -194,7 +212,9 @@ sroted(l)
 s.upper()        #小写字母转换成大写字母
 s.lower()        #大写字母转换成小写字母
 s.capitalize()   #首字母转换成大写，其余小写
+# eg 'This is test'
 s.title()        #每个单词首字母大写，其余小写
+# eg 'This Is Test'
 
 # find() index()
 info = 'abcd'
