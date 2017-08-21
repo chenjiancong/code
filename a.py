@@ -1,18 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-def addEnd(L = None):
-    if L == None:
-        L = []
-    L.append('End')
+
+def addEnd(*args):
+    L=[]
+    L.append(args)
     return L
-
-a=addEnd([])
-print(a)
-
-def gensquares(n):
-    for i in range(n):
-        yield i ** 2
-
-for item in gensquares(5):
-    print(item)
+b = addEnd(123)
+#addEnd(1,123)
+print(b)
