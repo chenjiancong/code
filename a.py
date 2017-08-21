@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-
-def addEnd(*args):
-    L=[]
-    L.append(args)
+def func1(*args):
+    L = list(args)
+    if args == None:
+        L = []
+    L.append('End')
     return L
-b = addEnd(123)
-#addEnd(1,123)
-print(b)
+
+print(func1())
+
+L1 = ['tom', 'peter']
+def toUpper(L1):
+    return L1.upper()
+
+a = map(toUpper, L1)
+print(list(a))
