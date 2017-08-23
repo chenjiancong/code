@@ -121,9 +121,6 @@ for i, values in enumerate(['A', 'B', 'C']):
 # 迭代时数据可以是未生成的；
 # 遍历时数据已经钦定
 
-# 2017.08.21 判断一个对象能否迭代
-isinstance('abc', Iterable) >>> True
-isinstance(123, Iterable) >>> False
 
 # Generator 生成器
 # 列表元素按算法推导，一边循环一边计算，称为生成器: generator
@@ -133,6 +130,17 @@ isinstance(123, Iterable) >>> False
 # 调用的算法可以是next(g),或者用for
 for n in g:
     print(n)
+# yield 如果一个函数(def)里包含yield，那这个函数就是一个generator
+
+# 2017.08.23
+# Iterable 迭代器
+# 可迭代对象定义：
+# 集合数据，如list,tuple,dict,set,str等；生成器generator,generator funceiton
+# 这些可以直接作用for循环的对象统称为可迭代对象： Iterable
+# 判断一个对象能否迭代
+isinstance('abc', Iterable) >>> True
+isinstance(123, Iterable) >>> False
+
 
 # About 函数参数
 # 参数的顺序：必选参数、默认参数、可变参数、关键字参数
