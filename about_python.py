@@ -49,7 +49,7 @@ a = 'XYZ'
 print b
 输出是 ‘ABC’
 
-#字符编码
+# 字符编码
 ASCII里，A = 65,z = 122
 >>>ord('A')
 65
@@ -59,10 +59,6 @@ A
 中文
 >>>u'中'
 u'\u432d'
-
-#  print r'' 表示内部字符串默认不转义
-print '\\\t\\'
-print r'\\\t\\'
 
 # 2017.08.05 About format格式化字符串
 1,不需要理会数据类型
@@ -121,7 +117,6 @@ for i, values in enumerate(['A', 'B', 'C']):
 # 迭代时数据可以是未生成的；
 # 遍历时数据已经钦定
 
-
 # Generator 生成器
 # 列表元素按算法推导，一边循环一边计算，称为生成器: generator
 # 只需求将列表生成式(List Comprehensions)的[]改为()，就创建了 generator
@@ -133,14 +128,13 @@ for n in g:
 # yield 如果一个函数(def)里包含yield，那这个函数就是一个generator
 
 # 2017.08.23
-# Iterable 迭代器
+# 迭代器
 # 可迭代对象定义：
 # 集合数据，如list,tuple,dict,set,str等；生成器generator,generator funceiton
 # 这些可以直接作用for循环的对象统称为可迭代对象： Iterable
 # 判断一个对象能否迭代
 isinstance('abc', Iterable) >>> True
 isinstance(123, Iterable) >>> False
-
 
 # About 函数参数
 # 参数的顺序：必选参数、默认参数、可变参数、关键字参数
@@ -161,7 +155,7 @@ def func1(*args):
 # is 与 == 的区别
 # is拿id作为判断因素； == 拿 value 作为判断因素
 
-# 2017.08.19
+# 2017.08.19 About *args **kw
 # *args, 可变参数,可以传入任意个参数，包括0个参数
 # *args 参数args 接收到的是tuple
 def func1(*args):
@@ -236,6 +230,8 @@ print(info.index('a')) # 如果有就返回 0, 没有返回报错
 # Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
 
 # Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
+
+# About Decorator
 # 装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
 例如打印名称
 def name():
@@ -264,6 +260,14 @@ for i in numbers:
     sum += i
 return sum
 
+# 2017.08.24 About Partial function 偏函数
+# 就是自定义一个函数，并绑定默认值
+# 使用前要导入 import functools
+import functools
+int2 = functools.partial(int, base=2)
+int2('1000')
+# 相当于  int('1000', base=2)
+
 # 2017.08.04 About OOP 面向对象编程
 '''
 # 面向对象编程 Object Oriented Programming
@@ -280,7 +284,6 @@ return sum
 5,类的成员: 字段 方法 属性
 '''
 # 命名约定: 1,大写方法名称的首字母;2,使用一个唯一的小字符串作为数据属性名称前缀
-
 
 # 创建类
 class Foo(object):
@@ -332,6 +335,9 @@ class Student(object):
 
 # @property 将方法变成属性,限制访问
 
+# 2017.08.24 对象的三个要素:id, type, value
+# id用来唯一标识一个对象;type标识对象的类型;value是对象的值
+
 # About I/O 读取
 # with ... as ... 自动调用close()
 # read 读
@@ -347,7 +353,6 @@ class Student(object):
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
 
-# 2017.08.14
-# 查询类型
+# 2017.08.14 查询类型
 type('a')
 isinstance('a', str)
