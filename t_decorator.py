@@ -4,13 +4,14 @@
 from functools import reduce
 
 def log(func):
-    def wrapper(*args, **kw):
-        print('{}'.format(func.__name__))
+    def warrper(*args, **kw):
+        print('函数名: {}'.format(func.__name__))
+        print('参数： {}'.format(func))
         return func(*args, **kw)
-    return wrapper
-
+    return warrper
 @log
-def func3(n):
+# 阶乘
+def func1(n):
     return reduce(lambda x, y: x * y, range(1, n + 1))
+print(func1(4))
 
-print(func3(4))
