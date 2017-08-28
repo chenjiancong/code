@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+<<<<<<< HEAD
 def log(func):
     def wrapper(*args, **kw):
         print('call {}'.format(func.__name__))
@@ -30,3 +31,13 @@ a = func1
 a()
 
 func2()
+=======
+from functools import reduce
+
+def func1(n):
+    sum = 0
+    for i in range(n + 1):
+        return sum = sum + i
+    return sum
+print(func1(100))
+>>>>>>> 26346d661745d30828b8061028fff810477901fc

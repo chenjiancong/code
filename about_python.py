@@ -258,6 +258,38 @@ def uid(func):
 def name():
     print 'jack'
 
+<<<<<<< HEAD
+=======
+#  222
+#  jack
+
+# 求和、求阶乘的方法
+# 求和1
+def fun1(n):
+    sum = 0
+    for i in range(n + 1):
+        sum = sum + i
+    return sum
+
+# 求和2
+def fun2(n):
+    sum, i = 0, 1
+    while n - i >= 0:
+        sum = sum +i
+        i   = i + 1
+    return sum
+
+# 阶乘1
+from functools import reduce
+def func1(n):
+    return reduce(lambda x, y: x * y, range(n + 1))
+
+def func2(n):
+    if n == 1:
+        return 1
+    return n * func2(n - 1)
+
+>>>>>>> 26346d661745d30828b8061028fff810477901fc
 # 2017.08.24 About Partial function 偏函数
 # 就是自定义一个函数，并绑定默认值
 # 使用前要导入 import functools
