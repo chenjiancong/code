@@ -2,6 +2,44 @@
 #-*- coding:utf-8 -*-
 # Somethig about python
 
+# Some Tips
+# About 赋值
+'='                   #赋值，先计算右侧的表达式
+EX
+a = 'ABC'
+b = a
+a = 'XYZ'
+print b
+输出是 ‘ABC’
+
+# 字符编码
+ASCII里，A = 65,z = 122
+>>>ord('A')
+65
+>>>chr(65)
+A
+>>>print u'中文'
+中文
+>>>u'中'
+u'\u432d'
+
+#显示内置函数(BIF) Build-in funcations
+>>>dir(__builtins__)
+
+# 2017.08.11 About 函数带括号与不带括号的区别
+#带括号指的是返回结果
+#不带括号是执行函数
+
+# 2017.08.14 查询类型
+type('a')
+isinstance('a', str)
+
+# is 与 == 的区别
+# is拿id作为判断因素； == 拿 value 作为判断因素
+
+# 2017.08.24 对象的三个要素:id, type, value
+# id用来唯一标识一个对象;type标识对象的类型;value是对象的值
+
 # About Time
 # From: http://www.cnblogs.com/wanpython/archive/2010/08/07/1794598.html
 time.strftime('%Y-%m-%d',time.localtime(time.time()))
@@ -36,29 +74,6 @@ python中时间日期格式化符号：
 %X 本地相应的时间表示
 %Z 当前时区的名称
 %% %号本身
-
-#显示内置函数(BIF) Build-in funcations
->>>dir(__builtins__)
-
-# About 赋值
-'='                   #赋值，先计算右侧的表达式
-EX
-a = 'ABC'
-b = a
-a = 'XYZ'
-print b
-输出是 ‘ABC’
-
-# 字符编码
-ASCII里，A = 65,z = 122
->>>ord('A')
-65
->>>chr(65)
-A
->>>print u'中文'
-中文
->>>u'中'
-u'\u432d'
 
 # 2017.08.05 About format格式化字符串
 1,不需要理会数据类型
@@ -152,9 +167,6 @@ def func1(*args):
         L.append('End')
     return L
 
-# is 与 == 的区别
-# is拿id作为判断因素； == 拿 value 作为判断因素
-
 # 2017.08.19 About *args **kw
 # *args, 可变参数,可以传入任意个参数，包括0个参数
 # *args 参数args 接收到的是tuple
@@ -186,6 +198,8 @@ map(func, *iterables)
 map(len, ['a', 'aa'])
 
 # reduce 迭代
+# reduce 把结果继续和序列的下一个元素做累积计算
+
 from functools import reduce # 使用前要导入
 reduce(lambda a, b: a + b, [1, 2])
 
@@ -223,15 +237,10 @@ info = 'abcd'
 print(info.find('a')) # 如果有就返回 0, 没有返回 -1
 print(info.index('a')) # 如果有就返回 0, 没有返回报错
 
-# 2017.08.11 About 函数带括号与不带括号的区别
-#带括号指的是返回结果
-#不带括号是执行函数
-
 # Iteration 迭代 给定一个list 或 tuple， 可以通过for 循环来遍历这个list 或 tuple
 
-# Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
-
 # About Decorator
+# Decorator 装饰器的功能就是将被装饰的函数当作参数传递给
 # 装饰器对应的函数(名称相同的函数)，并返回包装后的被装饰的函数
 例如打印名称
 def name():
@@ -248,17 +257,6 @@ def uid(func):
 @uid
 def name():
     print 'jack'
-
-#  222
-#  jack
-
-算法：
-a + b + c + ...
-sum = 0
-for i in numbers:
-#    sum = sum + i
-    sum += i
-return sum
 
 # 2017.08.24 About Partial function 偏函数
 # 就是自定义一个函数，并绑定默认值
@@ -335,8 +333,6 @@ class Student(object):
 
 # @property 将方法变成属性,限制访问
 
-# 2017.08.24 对象的三个要素:id, type, value
-# id用来唯一标识一个对象;type标识对象的类型;value是对象的值
 
 # About I/O 读取
 # with ... as ... 自动调用close()
@@ -352,7 +348,3 @@ class Student(object):
 # read(size) 每次最多读取size个字节
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
-
-# 2017.08.14 查询类型
-type('a')
-isinstance('a', str)
