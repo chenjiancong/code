@@ -2,16 +2,18 @@
 # encoding: utf-8
 
 class Student(object):
-    school = 'GZ_School'
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+#    def print_name(self):
+#        print('{}:{}'.format(self.__name, self.__score))
 
+    def get_name(self):
+        return self.__name
 
-    def detial(self):
-        print('Student name:{}'.format(self.name))
+    def set_score(self, score):
+        self.__score = score
 
-tom = Student('Tom', 18)
-print(tom.school)
-tom.detial()
+tom = Student('Tom', 80)
+print(tom.get_name())

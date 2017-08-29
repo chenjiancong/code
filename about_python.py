@@ -339,6 +339,31 @@ class Foo:
 obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
+# 2017.08.29 About 限制访问 private
+class Student(object):
+    def __init__(self, name, score):
+    # 设置为private
+        self.__name = name
+        self.__score = score
+
+    # 设置访问
+    def get_name(self):
+        return self.__name = name
+
+    # 设置修改
+    def set_score(self, score):
+        self.__score = scre
+
+tom = Student('Tom', 80)
+'''
+当外部要访问时
+tom.get_name()
+
+当外部要修改时
+tom.set_score = 99
+
+'''
+
 # 2017.08.09 About 继承、多态
 # 继承
 
