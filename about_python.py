@@ -340,6 +340,10 @@ obj1 = Foo('Tom', 18)
 obj2 = Foo('Jack', 20)
 
 # 2017.08.29 About 限制访问 private
+"""
+也就是实例化之后不允许访问；
+假如另外再次定义还是可以访问
+"""
 class Student(object):
     def __init__(self, name, score):
     # 设置为private
