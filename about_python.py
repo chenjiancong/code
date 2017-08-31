@@ -365,8 +365,27 @@ tom.get_name()
 
 当外部要修改时
 tom.set_score = 99
+'''
+# About __slots__ 限制实例属性;优化内存(但不利于代码维护)
+# 仅对当前类实例起作用,对继承的子类不起作用
 
 '''
+python 能动态增加类增加类
+比如
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+s = Student('tom', 99)
+然后可以增加类
+s.age = 15
+但如果使用了 __slots__ 限定了类就不能增加
+'''
+class Student(object):
+    __slots__ = ('name', 'age') # 用tuple 定义允许绑定的属性名称(允许修改的属性)
+
+# private 与 __slots__ 区别。前者是限制属性的访问，后者是控制属性的增加
 
 # 2017.08.09 About 继承、多态
 # 继承
@@ -386,11 +405,6 @@ class Dog(Animal):
     def run(self):
         print('Dog is running...')
 
-# 2017.08.15
-# __slots__ 限制实例属性;优化内存(但不利于代码维护)
-# 仅对当前类实例起作用,对继承的子类不起作用
-class Student(object):
-    __slots__ = ('name', 'age') # 用tuple 定义允许绑定的属性名称(允许修改的属性)
 
 # @property 将方法变成属性,限制访问
 

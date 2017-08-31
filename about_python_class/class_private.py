@@ -22,6 +22,6 @@ class Student(object):
 
 tom = Student('tom', 88)
 print(tom.get_name())
-tom.set_score(10)
-print(tom.get_score())
-print(tom.school)
+#tom.set_score(10)
+#print(tom.get_score())
+#print(tom.school)
