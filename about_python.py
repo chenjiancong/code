@@ -3,6 +3,25 @@
 # Somethig about python
 
 # Some Tips
+
+# 2017.09.01
+# python中有三种数：整数、浮点数、复数
+# 浮点数 3.23 、 5E-1 （即5 *10）
+# 复数(-5+4j)
+# 无效的标识符： 2things, this is, my-name
+
+# break, continute
+# break
+while True:
+    s = input('Enter something:')
+    if s == 'quit':
+        break
+    print('Length is ',len(s))
+print('Done')
+
+# continue
+
+
 # About 赋值
 '='                   #赋值，先计算右侧的表达式
 EX
@@ -282,7 +301,7 @@ def fun2(n):
 # 阶乘1
 from functools import reduce
 def func1(n):
-    return reduce(lambda x, y: x * y, range(n + 1))
+    return reduce(lambda x, y: x * y, range(1, n + 1)) # 由1开始，不然结果为0
 
 def func2(n):
     if n == 1:
