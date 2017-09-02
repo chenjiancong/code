@@ -147,6 +147,13 @@ for i, values in enumerate(['A', 'B', 'C']):
 1 B
 2 C
 
+# About 切片 2017.09.02
+# shoplist = ['apple', 'mango', 'carrot', 'banana']
+shoplist[:] # 返回整个列表
+shoplist[1:3] # 返回1开始，包括位置2
+shoplist[:-1] # 返回除最后一个的切片
+shoplist[::3] # 第三个参数是切片步长
+
 # 2017.08.20 迭代与遍历的区别
 # 迭代时数据可以是未生成的；
 # 遍历时数据已经钦定
