@@ -5,13 +5,15 @@ import os
 import time
 
 # source
-source = '/home/jack/test1'
+source = ['/home/jack/test1/', 'a_python.py']
+#source = '/home/jack/test1'
 # backup_dir
 target_dir = '/home/jack'
 # name
 target_name = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
 # command
-zip_command = 'zip -qr {} {}'.format(target_name, source)
+zip_command = 'zip -qr {} {}'.format(target_name, ''.join(source))
+#zip_command = 'zip -qr {} {}'.format(target_name, source)
 
 print(zip_command)
 if os.system(zip_command) == 0:
