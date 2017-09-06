@@ -10,6 +10,10 @@
 # 复数(-5+4j)
 # 无效的标识符： 2things, this is, my-name
 
+# str.replace()
+str.replace(rgExp, replaceText, max)
+s1.replace('a', 'b', 3) # 将a 替换成 b 最多3次
+
 # break, continute
 # break
 while True:
