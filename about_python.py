@@ -25,6 +25,9 @@ print('Done')
 
 # continue
 
+# 切片
+[::-1]  # 表示取整个列表，由最后一位开始
+[::2]   # 表示取整个列表，步长为2
 
 # About 赋值
 '='                   #赋值，先计算右侧的表达式
@@ -427,14 +430,26 @@ class Dog(Animal):
     pass
 
 # 多态
-class Animal(object):
-    def run_twice(animal):
-        animal.run()
+class SchoolMember(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-class Dog(Animal):
-    def run(self):
-        print('Dog is running...')
+    def tell(self):
+        print('Name:{}, Age:{}'.format(self.name, self.age), end = ' ')
 
+class Teacher(SchoolMember):
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+
+    def tell(self):
+        print('Salary:{}'.format(self.salary = salary))
+
+t = Teacher('Jack', 18, 3000)
+member = [t]
+for i in member:
+    i.tell()
 
 # @property 将方法变成属性,限制访问
 
