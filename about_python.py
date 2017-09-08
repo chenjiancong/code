@@ -25,9 +25,6 @@ print('Done')
 
 # continue
 
-# 切片
-[::-1]  # 表示取整个列表，由最后一位开始
-[::2]   # 表示取整个列表，步长为2
 
 # About 赋值
 '='                   #赋值，先计算右侧的表达式
@@ -160,6 +157,8 @@ shoplist[:] # 返回整个列表
 shoplist[1:3] # 返回1开始，包括位置2
 shoplist[:-1] # 返回除最后一个的切片
 shoplist[::3] # 第三个参数是切片步长
+[::-1]  # 表示取整个列表，由最后一位开始
+[::2]   # 表示取整个列表，步长为2
 
 # 2017.08.20 迭代与遍历的区别
 # 迭代时数据可以是未生成的；
@@ -197,7 +196,7 @@ def func1(*args):
     L = list(args)
     if L == None:
         L = []
-        L.append('End')
+    L.append('End')
     return L
 
 # 2017.08.19 About *args **kw
@@ -291,8 +290,6 @@ def uid(func):
 def name():
     print 'jack'
 
-<<<<<<< HEAD
-=======
 #  222
 #  jack
 
@@ -308,7 +305,7 @@ def fun1(n):
 def fun2(n):
     sum, i = 0, 1
     while n - i >= 0:
-        sum = sum +i
+        sum = sum + i
         i   = i + 1
     return sum
 
@@ -322,7 +319,6 @@ def func2(n):
         return 1
     return n * func2(n - 1)
 
->>>>>>> 26346d661745d30828b8061028fff810477901fc
 # 2017.08.24 About Partial function 偏函数
 # 就是自定义一个函数，并绑定默认值
 # 使用前要导入 import functools
@@ -468,3 +464,23 @@ for i in member:
 # read(size) 每次最多读取size个字节
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
+
+# 2017.09.08 操作目录
+import os
+# os.mkdir 创建目录
+'''
+创建目录时，不要直接拼字符串，而要通过os.path.join()
+这样是为了处理不同系统的路径分隔符。如linux: home/jack; win: d:\abc
+拆分路径时使用os.path.split()
+'''
+os.path.join('/home/jack/test1', 'abc')
+# os.path.split('/home/jack/test.txt') >>> ('/home/jack', 'test.txt')
+
+os.mkdir('/home/jack/test1/abc')
+# os.rmdir 删除目录
+os.rmdir('/home/jack/test1/abc')
+
+# os.rename() 重命名
+os.rename('test.txt', 'test.py')
+# os.remove() 删除文件
+os.remove('test.py')
