@@ -238,7 +238,7 @@ reduce(lambda a, b: a + b, [1, 2])
 #  map, reduce 区别
 map(f(x), range(10))
 reduce(f(x, y), range(10))
-map里的函数只接收1个参数, reduce函数里必须接收2个参数
+# map里的函数只接收1个参数, reduce函数里必须接收2个参数
 
 # map, reduce 在python3里的延迟计算,变成生成器，需要时才生成。所以用list或用for查看生成
 # 可以简单把map,reduce的返回值看成是一个集合
