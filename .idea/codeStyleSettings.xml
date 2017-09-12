@@ -6,6 +6,16 @@
         <Python>
           <option name="DICT_ALIGNMENT" value="2" />
         </Python>
+        <codeStyleSettings language="Python">
+          <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
+          <option name="SPACE_BEFORE_METHOD_CALL_PARENTHESES" value="true" />
+          <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="SMART_TABS" value="true" />
+            <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
       </value>
     </option>
     <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (1)" />
