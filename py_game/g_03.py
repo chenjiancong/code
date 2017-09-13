@@ -8,4 +8,6 @@
 import time
 
 date = input('输入年月日(eg 2017/09/12): ')
-print('strftime(%Y/%m%d)'.format(time.now()))
+print(time.strftime('%Y/%m/%d/%j'))
+def func(I):
+
