@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+from sys import argv
 
-def make_bold(func):
-    def warrper(*args, **kw):
-        print('<b>{}</b>'.format(func))
-        return func(*args, **kw)
-    return warrper
+script, first, second, third = argv
 
-@make_bold
-def get_content():
-    return 'Hello world'
-print(get_content())
-
+print('The script is called:', script)
+print('Your first variable is:', first)
+print('Your second variable is:', second)
+print('Your third variable is:', third)
