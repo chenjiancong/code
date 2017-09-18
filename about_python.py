@@ -46,6 +46,13 @@ A
 >>>u'中'
 u'\u432d'
 
+# 我们从网络或磁盘上读取了字节流，那么读到的数据就是bytes。要把bytes变为str，就需要用decode()方法：
+>>> b'ABC'.decode('ascii')
+'ABC'
+>>> b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
+'中文'
+
+
 #显示内置函数(BIF) Build-in funcations
 >>>dir(__builtins__)
 
