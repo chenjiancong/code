@@ -470,6 +470,7 @@ for i in member:
 # read(size) 每次最多读取size个字节
 # readline() 每次读取一行内容
 # readlines() 一次读取所有内容并按行返回list
+# truncate()
 
 # 2017.09.16 操作属性
 r 只读模式(read)
