@@ -4,6 +4,9 @@
 
 # Some Tips
 
+# 2017.09.20
+# def (define) 定义
+
 # 2017.09.01
 # python中有三种数：整数、浮点数、复数
 # 浮点数 3.23 、 5E-1 （即5 *10）
@@ -206,6 +209,7 @@ def func1(*args):
     return L
 
 # 2017.08.19 About *args **kw
+# *args 即 asterisk args
 # *args, 可变参数,可以传入任意个参数，包括0个参数
 # *args 参数args 接收到的是tuple
 def func1(*args):
