@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from sys import argv
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    creates = jars / 100
+    return jelly_beans, jars, creates
 
-script, first, second, third = argv
+start_point = 1000
+beans, jars, creates = secret_formula(start_point)
 
-print('The script is called:', script)
-print('Your first variable is:', first)
-print('Your second variable is:', second)
-print('Your third variable is:', third)
+print('With a starting point of: {}'.format(start_point))
+print('We\'d have {} beans, {} jars, and {} creates.'.format(beans, jars, creates))
+
+start_point = start_point / 10
