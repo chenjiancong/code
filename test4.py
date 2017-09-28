@@ -14,3 +14,5 @@ print('With a starting point of: {}'.format(start_point))
 print('We\'d have {} beans, {} jars, and {} creates.'.format(beans, jars, creates))
 
 start_point = start_point / 10
+
+print('start_point is :{}'.format(start_point))
