@@ -4,6 +4,9 @@
 
 # Some Tips
 
+#URI Uniform Resource Identifier 统一资源标识符
+#URL Uniform Resource Locator 统一资源定位符
+
 # 2017.09.20
 # def (define) 定义
 
@@ -351,6 +354,12 @@ int2('1000')
 3,类中的函数,第一个参数必须是 self;类中定义的函数叫 '方法'
 4,类的特性: 封装 继承 多态
 5,类的成员: 字段 方法 属性
+'''
+
+'''
+类的风格：
+class 应该使用 'camel case 驼峰式大小写'，例如 SuperGoldFactory 而不是super_gold_factory
+其他函数应该使用 'underscore format 下划线隔词'，例如 my_awesome_hair 而不是 myawesomehair
 '''
 # 命名约定: 1,大写方法名称的首字母;2,使用一个唯一的小字符串作为数据属性名称前缀
 
