@@ -2,10 +2,14 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/pi_sum.py" line="14" />
-    <bookmark url="file://$PROJECT_DIR$/a2.py" line="13" />
+    <bookmark url="file://$PROJECT_DIR$/p_io.py" line="11" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2cb3f6a-bdf5-4240-8489-1cab1379636e" name="Default" comment="" />
+    <list default="true" id="a2cb3f6a-bdf5-4240-8489-1cab1379636e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test3.py" afterPath="$PROJECT_DIR$/test3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_spider/urllib_test00.py" afterPath="$PROJECT_DIR$/web_spider/urllib_test00.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="429" />
-    <option name="y" value="107" />
+    <option name="x" value="416" />
+    <option name="y" value="73" />
     <option name="width" value="1028" />
     <option name="height" value="981" />
   </component>
@@ -434,8 +438,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="429" y="107" width="1028" height="981" extended-state="0" />
-    <editor active="false" />
+    <frame x="416" y="73" width="1028" height="981" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18469657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277027" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -520,6 +524,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/p_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/p_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">

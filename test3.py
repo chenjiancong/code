@@ -1,16 +1,9 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-<<<<<<< HEAD
-def sort_words(words):
-    return sorted(words)
-=======
-cites = {
-        'GZ': 'Guangzhou',
-        'Bj': 'Beijin',
-        'SH': 'Shanghai'
-        }
+def add_end(L=[]):
+    L.append('END')
+    return L
 
-for a, b in cites.items():
-    print(a, b)
->>>>>>> 56be6f46aceb3e7c55272b003555cdbd527544e9
+l = add_end([1,2])
+print(l)
