@@ -14,9 +14,13 @@
 # python中有三种数：整数、浮点数、复数
 # 浮点数 3.23 、 5E-1 （即5 *10）
 # 复数(-5+4j)
+# aa=123-12j
+# print(aa.real)
+# print(aa.imag)
+
 # 无效的标识符： 2things, this is, my-name
 
-# str.replace()
+# str.replace() 替换函数
 str.replace(rgExp, replaceText, max)
 s1.replace('a', 'b', 3) # 将a 替换成 b 最多3次
 
