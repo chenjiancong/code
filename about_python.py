@@ -188,7 +188,7 @@ for n in g:
 # 可迭代对象定义：
 # 集合数据，如list,tuple,dict,set,str等；生成器generator,generator funceiton
 # 这些可以直接作用for循环的对象统称为可迭代对象： Iterable
-# 判断一个对象能否迭代
+ 判断一个对象能否迭代
 isinstance('abc', Iterable) >>> True
 isinstance(123, Iterable) >>> False
 
@@ -339,7 +339,7 @@ def func2(n):
 # 使用前要导入 import functools
 import functools
 int2 = functools.partial(int, base=2)
-int2('1000')
+int('1000')
 # 相当于  int('1000', base=2)
 
 # 2017.08.04 About OOP 面向对象编程

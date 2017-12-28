@@ -1,27 +1,29 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-# 求x的n次方
-def func1(x, n = 2):
-    s = 1
-    while n > 0:
-        n = n - 1
-        s = s * x
-    return s
-print(func1(5, 3))
+def logging(level):
+    def my_func(func):
+        def p_name(*args, **kw):
+            print('Level is: {level} and Func call: {func}()'.format(
+                level = level,
+                func = func.__name__)
+                    )
+            return func(*args, **kw)
+        return p_name
+    return my_func
 
-# 在list后加'end'
-def add_end(L=None):
-    if L is None:
-        L = []
-    L.append('END')
-    return L
-print(add_end([1, 2]))
+def my_func(func):
+    def p_name(*args, **kw):
+        print('Func is:{}'.format(func.__name__))
+        return func(*args, **kw)
+    return p_name
 
-def add_end1(*args):
-    L = list(args)
-    if L is None:
-        L = []
-    L.append('END')
-    return L
-print(add_end1('aa'))
+#@my_func
+@logging(level='Info')
+def cal_sum(*args):
+    sum = 0
+    for i in args:
+        sum = sum + i
+    return sum
+
+print(cal_sum(1,9))
