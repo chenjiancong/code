@@ -74,9 +74,6 @@ u'\u432d'
 type('a')
 isinstance('a', str)
 
-# is 与 == 的区别
-# is拿id作为判断因素； == 拿 value 作为判断因素
-
 # 2017.08.24 对象的三个要素:id, type, value
 # id用来唯一标识一个对象;type标识对象的类型;value是对象的值
 
@@ -207,13 +204,18 @@ def add_end(L=None):
         L = []
     L.append('END')
     return L
+# 调用的时候要这样: add_end([1, 2])
 # 2017.08.21 另一种写法
 def func1(*args):
     L = list(args)
     if L == None:
         L = []
     L.append('End')
-    return L
+
+# is 与 == 的区别
+# is拿id作为判断因素； == 拿 value 作为判断因素
+
+   return L
 
 # 2017.08.19 About *args **kw
 # *args 即 asterisk args
