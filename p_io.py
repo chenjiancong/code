@@ -8,4 +8,4 @@ with open('/home/jack/test1/readme.txt', 'a+') as f:
 
 # read
 with open('/home/jack/test1/readme.txt', 'r') as f:
-	print(f.read())
+    print(f.read())

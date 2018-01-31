@@ -1,11 +1,11 @@
-#Filename: about_python.txt
+# Filename: about_python.txt
 #-*- coding:utf-8 -*-
 # Somethig about python
 
 # Some Tips
 
-#URI Uniform Resource Identifier 统一资源标识符
-#URL Uniform Resource Locator 统一资源定位符
+# URI Uniform Resource Identifier 统一资源标识符
+# URL Uniform Resource Locator 统一资源定位符
 
 # 2017.09.20
 # def (define) 定义
@@ -22,7 +22,7 @@
 
 # str.replace() 替换函数
 str.replace(rgExp, replaceText, max)
-s1.replace('a', 'b', 3) # 将a 替换成 b 最多3次
+s1.replace('a', 'b', 3)  # 将a 替换成 b 最多3次
 
 # break, continute
 # break
@@ -30,14 +30,14 @@ while True:
     s = input('Enter something:')
     if s == 'quit':
         break
-    print('Length is ',len(s))
+    print('Length is ', len(s))
 print('Done')
 
 # continue
 
 
 # About 赋值
-'='                   #赋值，先计算右侧的表达式
+'='  # 赋值，先计算右侧的表达式
 EX
 a = 'ABC'
 b = a
@@ -46,29 +46,51 @@ print b
 输出是 ‘ABC’
 
 # 字符编码
-ASCII里，A = 65,z = 122
->>>ord('A')
+ASCII里，A = 65, z = 122
+>> > ord('A')
 65
->>>chr(65)
+>> > chr(65)
 A
->>>print u'中文'
+>> > print u'中文'
 中文
->>>u'中'
+>> > u'中'
 u'\u432d'
 
 # 我们从网络或磁盘上读取了字节流，那么读到的数据就是bytes。要把bytes变为str，就需要用decode()方法：
->>> b'ABC'.decode('ascii')
+>> > b'ABC'.decode('ascii')
 'ABC'
->>> b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
+>> > b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
 '中文'
 
+# 数字 2018.01.13
+'''
+oct() 将十进制转换成八进制
+hex() 将十进制转换成十六进制
+bin() 将十进制转换成二进制
 
-#显示内置函数(BIF) Build-in funcations
->>>dir(__builtins__)
+生成随机数
+import random
+random.random() 随机生成小数
+random.randint(1, 10) 指定范围内生成整数
+random.choice(['jack', 'tom', 'merry']) 随机选择
+
+分数
+from fractions import Fraction
+x = Fraction(1,3)
+y = Fraction(1,3)
+print(x + y)
+>> 2/3
+'''
+
+# 2018.01.20
+# print(a, end=' ') 使所有输出都在同一行，之间用空格隔开
+
+# 显示内置函数(BIF) Build-in funcations
+>> > dir(__builtins__)
 
 # 2017.08.11 About 函数带括号与不带括号的区别
-#带括号指的是返回结果
-#不带括号是执行函数
+# 带括号指的是返回结果
+# 不带括号是执行函数
 
 # 2017.08.14 查询类型
 type('a')
@@ -79,8 +101,8 @@ isinstance('a', str)
 
 # About Time
 # From: http://www.cnblogs.com/wanpython/archive/2010/08/07/1794598.html
-time.strftime('%Y-%m-%d',time.localtime(time.time()))
-example: 2010-07-19
+time.strftime('%Y-%m-%d', time.localtime(time.time()))
+example: 2010 - 07 - 19
 
 time.strftime里面有很多参数，可以让你能够更随意的输出自己想要的东西：
 下面是time.strftime的参数：
@@ -88,33 +110,33 @@ strftime(format[, tuple]) -> string
 将指定的struct_time(默认为当前时间)，根据指定的格式化字符串输出
 
 python中时间日期格式化符号：
-%y 两位数的年份表示（00-99）
-%Y 四位数的年份表示（000-9999）
-%m 月份（01-12）
-%d 月内中的一天（0-31）
-%H 24小时制小时数（0-23）
-%I 12小时制小时数（01-12）
-%M 分钟数（00=59）
-%S 秒（00-59）
+%y 两位数的年份表示（00 - 99）
+%Y 四位数的年份表示（000 - 9999）
+%m 月份（01 - 12）
+%d 月内中的一天（0 - 31）
+%H 24小时制小时数（0 - 23）
+%I 12小时制小时数（01 - 12）
+%M 分钟数（00 = 59）
+%S 秒（00 - 59）
 
 %a 本地简化星期名称
 %A 本地完整星期名称
 %b 本地简化的月份名称
 %B 本地完整的月份名称
 %c 本地相应的日期表示和时间表示
-%j 年内的一天（001-366）
+%j 年内的一天（001 - 366）
 %p 本地A.M.或P.M.的等价符
-%U 一年中的星期数（00-53）星期天为星期的开始
-%w 星期（0-6），星期天为星期的开始
-%W 一年中的星期数（00-53）星期一为星期的开始
+%U 一年中的星期数（00 - 53）星期天为星期的开始
+%w 星期（0 - 6），星期天为星期的开始
+%W 一年中的星期数（00 - 53）星期一为星期的开始
 %x 本地相应的日期表示
 %X 本地相应的时间表示
 %Z 当前时区的名称
-%% %号本身
+% % %号本身
 
 # 2017.08.05 About format格式化字符串
-1,不需要理会数据类型
-2,填充方式灵活
+1, 不需要理会数据类型
+2, 填充方式灵活
 print('hello {0}'.format('world'))
 print('hello {}, i am {}.nice to meet {}'.format('tom', 'jack', 'tom'))
 print('hello {name1}'.format(name1='jack'))
@@ -125,7 +147,7 @@ classmates = ['Tom', 'Jack', 'Marry']
 # 末尾追加元素
 classmates.append('Adam')
 # 插入到指定位置
-classmates.insert(1,'Peter')
+classmates.insert(1, 'Peter')
 # 删除指定元素 i为索引位置
 classmates.pop(i)
 
@@ -133,7 +155,7 @@ classmates.pop(i)
 t = ('a', 'b', 'c')
 
 # dic 1,查找和插入速度快，不随key增加而变慢；2,需要占用大量内存;3,dict的key必须是不可变
-name = {'Tom':98, 'Jack':89, 'Marry':79}
+name = {'Tom': 98, 'Jack': 89, 'Marry': 79}
 # 显示Jack成绩
 name['Jack']
 
@@ -144,7 +166,7 @@ name['Tom'] = 77
 name.pop('Marry')
 
 # 字典的遍历
-d = {'Tom':80, 'Jack':66}
+d = {'Tom': 80, 'Jack': 66}
 # key, values的遍历
 for key, value in d.items()
     print(key, value)
@@ -156,7 +178,25 @@ for value in d.values():
 # set 重复元素自动过滤重复值
 s = set([1, 1, 2, 3, 3])
 >>s
-{1,2,3}
+{1, 2, 3}
+
+# 2018.01.21 zip
+# zip 是将组合以最短的序列作参数，返回新元组
+# 可以将元组快速做成字典
+# x=[1,2]
+# y=[3,4,5]
+# m=list(zip(x,y))
+# >>[(1,3),(2,4)]
+keys=['jack','tom','merry']
+ages=[12,13,14]
+S=dict(zip(keys,ages))
+>> {'jack':12,'tom':13,'merry':14}
+
+# 2018.01.22 enumerate
+# 将元组索引和值迭代出来
+for index, values in enumerate(['a']):
+    print(index, values)
+>> 0 a
 
 #  list遍历, enumerate,将下标循环出来
 for i, values in enumerate(['A', 'B', 'C']):
@@ -167,10 +207,10 @@ for i, values in enumerate(['A', 'B', 'C']):
 
 # About 切片 2017.09.02
 # shoplist = ['apple', 'mango', 'carrot', 'banana']
-shoplist[:] # 返回整个列表
-shoplist[1:3] # 返回1开始，包括位置2
-shoplist[:-1] # 返回除最后一个的切片
-shoplist[::3] # 第三个参数是切片步长
+shoplist[:]  # 返回整个列表
+shoplist[1:3]  # 返回1开始，包括位置2
+shoplist[:-1]  # 返回除最后一个的切片
+shoplist[::3]  # 第三个参数是切片步长
 shoplist[::-1]  # 反向取整个列表
 
 # 2017.08.20 迭代与遍历的区别
@@ -211,11 +251,11 @@ def func1(*args):
     if L == None:
         L = []
     L.append('End')
+   return L
 
 # is 与 == 的区别
 # is拿id作为判断因素； == 拿 value 作为判断因素
 
-   return L
 
 # 2017.08.19 About *args **kw
 # *args 即 asterisk args
@@ -323,7 +363,7 @@ def fun1(n):
 # 求和2
 def fun2(n):
     sum, i = 0, 1
-    while n - i >= 0:
+    while n >= i:
         sum = sum + i
         i   = i + 1
     return sum

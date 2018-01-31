@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  {% if message %}
+  <p>{{message}}</p>
+  {% endif %}
+  <form action="/login" method='post'>
+    <p><input type="text" name='username' placeholder='Username'></p>
+    <p><input type="password" name='password' placeholder='Password'></p>
+    <p><input type="submit" value='提交'></p>
+  </form>
+</body>
+</html>
