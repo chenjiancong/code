@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # apt
  alias update="sudo apt-get update -y"
  alias upgrade="sudo apt upgrade -y"
- alias autormove="sudo apt autoremove"
+ alias autoremove="sudo apt autoremove"
  alias list="apt list --upgradable"
  alias vimrc="vim ~/.vimrc"
 
