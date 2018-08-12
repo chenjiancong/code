@@ -1,0 +1,5 @@
+# About install Intellij IDEA
+tar -zxvf intellij.tar
+
+sudo cp -r intellij /usr/bin/share/intellij
+sudo chmod a=+x /usr/bin/share/intellij/bin/idea.sh
