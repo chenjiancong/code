@@ -14,13 +14,12 @@ case $confirm in
   sudo apt -y update && sudo apt -y upgrade
   sudo apt install software-properties-common software-properties-gtk -y
 
-
-  echo '笔记本调整屏幕默认亮度操作'
+"  echo '笔记本调整屏幕默认亮度操作'
     sudo apt -y install xbacklight
     xbacklight = 40%
-
+"
   echo '安装 fcitx 框架操作'
-    sudo apt install -y fcitx fcitx-table-wubi-large fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config wget
+    sudo apt install -y fcitx fcitx-table-wubipy fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config wget
     clear
     echo "请在设置向导中选择fcitx为默认输入法框架，第二步请选择“Yes”"
     echo ""
@@ -39,6 +38,9 @@ case $confirm in
     echo "正在安装文泉驿字体套件"
     sudo apt install -y fonts-wqy-microhei ttf-wqy-microhei
 
+    echo "安装mpv"
+    sudo apt install -y mpv
+
   echo ' steam 字体包(解决字体方块)'
     sudo apt install -y fonts-wqy-zenhei
 
@@ -47,24 +49,29 @@ case $confirm in
     sudo apt update
     sudo apt -y install elementary-tweaks
 
-  echo "正在安装 Elementary Full 图标主题"
+"  echo "正在安装 Elementary Full 图标主题"
     sudo apt -y install git
     git clone https://github.com/btd1337/elementary-full-icon-theme
     sudo mv elementary-full-icon-theme /usr/share/icons/
     gsettings set org.gnome.desktop.interface icon-theme "elementary-full-icon-theme"
     sudo rm -rf elementary-full-icon-theme
     clear
+"
+
   echo "正在安装 Arc 主题"
-    sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
-    sudo apt-key adv --recv-keys --keyserver keyserver.Ubuntu.com BEB6D886
-    sudo apt update
-    sudo apt -y install arc-theme
-    clear
+    sudo add-apt-repository ppa:noobslab/themes
+    sudo apt-get update
+    sudo apt-get install arc-theme
+
+    sudo add-apt-repository ppa:noobslab/icons
+    sudo apt-get update
+    sudo apt-get install arc-icons
+   clear
+
   echo "正在安装 Paper 主题"
     sudo add-apt-repository -y ppa:snwh/pulp
     sudo apt update
     sudo apt install -y paper-gtk-theme paper-icon-theme
-
 
   echo "正在安装压缩文件支持库"
     sudo apt -y install zip unzip p7zip p7zip-rar rar unrar
@@ -73,6 +80,12 @@ case $confirm in
     sudo apt -y install ubuntu-restricted-extras
     clear
 
+  echo "正在安装Chrome"
+    sudo apt -y install chrome
+
+  echo "正在安装xfce4-terminal"
+    sudo apt -y install xfce4-terminal
+
   echo "正在安装火狐浏览器"
     sudo apt -y install firefox
     clear
@@ -80,17 +93,40 @@ case $confirm in
     echo ""
     sudo apt remove --purge epiphany-browser epiphany-browser-data -y
 
-  echo 'oh-my-zsh'
+  echo "正在安装git"
     sudo apt -y install git
+
+  echo "正在安装snap"
+    sudo apt -y install snap snapd-xdg-open
+
+  echo "安装 java"
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt update
+    sudo apt-get install -y oracle-java8-installer
+    'sudo apt install -y oracle-java9-installer'
+
+  echo "安装comix"
+    sudo apt install -y comix
+
+  echo 'oh-my-zsh'
+    sudo apt install -y zsh
     wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 
-  echo "正在安装BleachBit系统清理工具"
+  echo '图片查看工具'
+    sudo apt install -y viewnior
+
+"  echo "正在安装BleachBit系统清理工具"
     echo ""
     sudo apt -y install bleachbit
 
   echo "正在安装LibreOffice"
     echo ""
     sudo apt -y install libreoffice
+"
+  echo "科学上网 shadowsocks"
+    sudo add-apt-repository ppa:hzwhuang/ss-qt5
+    sudo apt-get update
+    sudo apt-get install -y shadowsocks-qt5
 
   echo "正在Shutter"
     echo ""
@@ -102,6 +138,12 @@ case $confirm in
     echo ""
     sudo apt -y install aria2
 
+  echo "install Uget"
+    sudo apt install -y uget
+
+  echo "install deluge"
+    sudo apt install -y deluge
+
   echo "正在安装Shotwell"
     echo ""
     sudo apt install -y shotwell
@@ -109,6 +151,15 @@ case $confirm in
   echo "正在安装GParted"
     echo ""
     sudo apt -y install gparted
+
+  echo "sublime text 3"
+  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  sudo apt-get update
+  sudo apt-get install sublime-text
+  echo "解决不能输入中文"
+    git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+    cd sublime-text-imfix && ./sublime-imfix
 
   echo "正在修复损坏的软件包"
     echo ""
@@ -129,6 +180,14 @@ case $confirm in
     sudo apt-add-repository ppa:numix/ppa
     sudo apt-get update
     sudo apt-get -y install numix-icon-theme-circle
+
+  echo 'papirus-icon-theme'
+    sudo add-apt-repository ppa:papirus/papirus
+    sudo apt update && sudo apt install papirus-icon-theme
+
+  echo 'Paper iscons'
+    sudo add-apt-repository -u ppa:snwh/ppa
+    sudo apt-get install paper-icon-theme
 
   echo 'variety 壁纸自动切换软件'
     sudo apt -y install variety
@@ -166,7 +225,11 @@ case $confirm in
     sudo apt update
     sudo apt -y install steam
 
+  echo '安装tmux'
+    sudo apt install -y tmux
+
   echo '隐藏Applications图标'
+  '~/.local/share/applications'
     cd /usr/share/Applications
     ls
     将不想显示的图标

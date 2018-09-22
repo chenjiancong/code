@@ -93,6 +93,10 @@ source $ZSH/oh-my-zsh.sh
  alias upgrade="sudo apt upgrade -y"
  alias autoremove="sudo apt autoremove"
  alias list="apt list --upgradable"
+ # 直接 install softname 就可以安装
+install() {sudo apt install -y "$1"}
+
+# vim ~/.vimrc
  alias vimrc="vim ~/.vimrc"
 
 # rm
