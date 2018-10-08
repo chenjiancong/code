@@ -13,3 +13,6 @@ ctrl + a / e
 # 在控制台下复制粘贴
 复制命令 ctrl + Insert
 粘贴命令 shift + Insert
+
+# unzip 乱码 指定解压字符集
+unzip -O CP936 XXX.zip

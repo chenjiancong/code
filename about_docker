@@ -1,0 +1,43 @@
+# 安装 docker
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+sudo apt install docker-ce
+
+# 镜像加速
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://8te5texh.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+# 非root用户增加操作权限
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo systemclt restart docker
+
+# 测试
+docker  info
+如果提示get ......dial unix /var/run/docker.sock权限不够，则修改/var/run/docker.sock权限
+sudo chmod a+rw /var/run/docker.sock
+
+# command not found:XXX
+zsh: command not found:mysql
+解决： 安装 mysql-client
+
+# 安装 mariadb
+docker pull mariadb
+$ sudo docker run  --name MariaDB \
+    # 映射 3307端口
+    -p 3307:3306 \
+    # 主机创建 /data/db/mariadb 文件夹挂载 mariadb默认数据目录
+    -v /data/db/mariadb:/var/lib/mysql \
+    # 创建 root 密码 为 1234
+    -e MYSQL_ROOT_PASSWORD=1234 \
+    -d mariadb

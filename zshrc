@@ -91,10 +91,15 @@ source $ZSH/oh-my-zsh.sh
 # apt
  alias update="sudo apt-get update -y"
  alias upgrade="sudo apt upgrade -y"
- alias autoremove="sudo apt autoremove"
+ alias autoremove="sudo apt autoremove -y"
  alias list="apt list --upgradable"
  # 直接 install softname 就可以安装
 install() {sudo apt install -y "$1"}
+remove() {sudo apt remove -y "$1"}
+
+# docker
+# 杀死所有正在运行的容器
+ alias dockerkillall="docker kill $(docker ps -a -q)"
 
 # vim ~/.vimrc
  alias vimrc="vim ~/.vimrc"
