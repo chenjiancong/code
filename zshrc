@@ -100,6 +100,8 @@ remove() {sudo apt remove -y "$1"}
 # docker
 # 杀死所有正在运行的容器
  alias dockerkillall="docker kill $(docker ps -a -q)"
+#快速登录MariaDB
+ alias loginmariadb="mycli -uroot -p1234 -P3307 -h0.0.0.0"
 
 # vim ~/.vimrc
  alias vimrc="vim ~/.vimrc"

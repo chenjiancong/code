@@ -228,6 +228,9 @@ case $confirm in
   echo '安装tmux'
     sudo apt install -y tmux
 
+  echo "安装mycli"
+    sudo apt install -y mycli
+
   echo '隐藏Applications图标'
   '~/.local/share/applications'
     cd /usr/share/Applications
