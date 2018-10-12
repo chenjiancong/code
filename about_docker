@@ -48,7 +48,7 @@ $ sudo docker run  --name MariaDB \
     -e MYSQL_ROOT_PASSWORD=1234 \
     -d mariadb
 
-# 安装 samba
+# 安装 samba https://github.com/dperson/samba
 docker pull dperson/samba
 
 # 运行镜像

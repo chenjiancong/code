@@ -13,3 +13,5 @@
     all = git add --all
     pull = git pull origin master
     push = git push origin master
+[credential]
+	helper = store
