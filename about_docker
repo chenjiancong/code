@@ -31,6 +31,12 @@ sudo chmod a+rw /var/run/docker.sock
 zsh: command not found:mysql
 解决： 安装 mysql-client
 
+# 查找镜像
+docker search soft_name
+
+# 拉取镜像
+docker pull soft_name
+
 # 安装 mariadb
 docker pull mariadb
 $ sudo docker run  --name MariaDB \
@@ -41,3 +47,18 @@ $ sudo docker run  --name MariaDB \
     # 创建 root 密码 为 1234
     -e MYSQL_ROOT_PASSWORD=1234 \
     -d mariadb
+
+# 安装 samba https://github.com/dperson/samba
+docker pull dperson/samba
+
+# 运行镜像
+# 一行命令
+# docker run -it --name samba -p 139:139 -p 445:445 -v /home/jack/share_doc:/mount -d dperson/samba -u "jack;jack" -s "shared;/mount/;yes;no;no;all;none"
+docker run -it --name samba -p 139:139 -p 445:445 \
+-v /home/jack/share_doc:/mount \  # 共享目录 /home/jack/share_doc
+-d dperson/samba \
+-u "jack;jack" \   # 用户名:密码
+-s "shared;/mount/;yes;no;no;all;none"
+
+# 停止镜像
+docker stop soft_name

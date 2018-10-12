@@ -94,5 +94,5 @@ substring("abcdefg",2,3) ,从第2位开始截取3个字符
 # 安装
 sudo apt install mycli
 # 使用
-mycli -hlocalhost -uroot -ppassword
+mycli -hipaddr -uroot -ppassword
 
