@@ -35,7 +35,7 @@ mysqldump -hhostname -uusername -ppassword db_name > backupfile.sql
 仅导出表结构
 mysqldump -hhostname -uusername -ppassword --no-data db_name >backupfile.sql
 
-导入数据库
+还原数据库
 mysql -hhostname -uusername -ppassword db_name < backupfile.sql
 
 插入数据到表里
