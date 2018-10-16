@@ -1,0 +1,42 @@
+# intellij 安装
+https://blog.csdn.net/u014796292/article/details/79531047
+sudo tar -xf ideaIU-2017.3.4-no-jdk.tar.gz
+sudo mv idea-IU-173.4548.28 /opt
+
+# 破解
+# 破解包下载
+http://idea.lanyus.com/
+
+https://blog.csdn.net/weixin_40132006/article/details/80515247
+# 编辑bin目录下的idea64.vmoptions和idea.vmoptions文件
+在最后一行插入-javaagent:/home/bobo/SoftWare/idea-IU-181.5087.20/bin/JetbrainsCrack-2.8-release-enc.jar（注意！！！一定是自己下载的jar包的地址哦，根据jar包的名字也要改，不要照着复制）。
+
+# 重启软件 在Active code 粘贴
+ThisCrackLicenseId-{
+"licenseId":"ThisCrackLicenseId",
+"licenseeName":"idea",
+"assigneeName":"",
+"assigneeEmail":"idea@163.com",
+"licenseRestriction":"For This Crack, Only Test! Please support genuine!!!",
+"checkConcurrentUse":false,
+"products":[
+{"code":"II","paidUpTo":"2099-12-31"},
+{"code":"DM","paidUpTo":"2099-12-31"},
+{"code":"AC","paidUpTo":"2099-12-31"},
+{"code":"RS0","paidUpTo":"2099-12-31"},
+{"code":"WS","paidUpTo":"2099-12-31"},
+{"code":"DPN","paidUpTo":"2099-12-31"},
+{"code":"RC","paidUpTo":"2099-12-31"},
+{"code":"PS","paidUpTo":"2099-12-31"},
+{"code":"DC","paidUpTo":"2099-12-31"},
+{"code":"RM","paidUpTo":"2099-12-31"},
+{"code":"CL","paidUpTo":"2099-12-31"},
+{"code":"PC","paidUpTo":"2099-12-31"}
+],
+"hash":"2911276/0",
+"gracePeriodDays":7,
+"autoProlongated":false}
+
+# 字体显示不正常
+# 修改 /usr/share/appliactions/intellij-idea-ultimate.desktop
+Exec=/opt/intellij-idea-ultimate/bin/idea.sh
