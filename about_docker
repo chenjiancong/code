@@ -1,3 +1,10 @@
+# About Docker
+# Linux 发展出一种虚拟货技术:Linux 容器(Linux Containers,LXC)
+# Linux 容器不是模拟一个完整操作系统，而是对进程进行隔离。
+# Docker 属于Linux 容器的一种封装，提供简单易用的容器使用接口。
+# Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件就生成一个虚拟容器。
+# Docker 有两个版本：社区版(Community Edition,CE),企业版(Enterprise Editon,EE)
+
 # 安装 docker
 # https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
