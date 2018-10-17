@@ -1,23 +1,27 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-class Student(object):
-    def __init__(self, name, score):
-        self.name = name
-        self.score = score
+x = [1, 2, 3]
+y = [4, 5, 6]
+#n = list(zip(x, y))
+# print(n)
+#m = list(zip(*n))
+# print(m)
+# print(type(m))
 
-    def print_score(self):
-        print('{name}:{score}'.format(name = self.name, score = self.score))
+keys = ['tom', 'jack', 'merry']
+vals = [14, 15, 13]
+m = list(zip(keys, vals))
+print(m)
 
-    def get_grade(self):
-        if self.score >= 90:
-            return 'A'
-        elif self.score >= 60:
-            return 'B'
-        else:
-            print('C')
+D2 = {}
+for (k, v) in zip(keys, vals):
+    D2[k] = v
+print(D2)
 
-bart = Student('Bart', 59)
-bart.print_score()
-bart.get_grade()
-#print(bart.get_grade())
+D3 = dict(zip(keys, vals))
+print(D3)
+
+s='abc'
+for i in enumerate(s):
+    print(i)
