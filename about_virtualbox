@@ -1,0 +1,10 @@
+# virtualbox 使用U盘
+# 安装Virtualbox Extension Pack
+# ‘Oracle VM VirtualBox Extension Pack’下载地址：http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#extpack
+
+# 添加用户权限
+# sudo groupadd usbfs
+
+# 将用户添加到vboxusers,usbfs这两个组中
+# sudo adduser jack vboxusers
+# sudo adduser jack usbfs
