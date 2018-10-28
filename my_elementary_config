@@ -49,37 +49,37 @@ case $confirm in
     sudo apt update
     sudo apt -y install elementary-tweaks
 
-  echo "正在安装 Elementary Full 图标主题"
-    sudo apt -y install git
-    git clone https://github.com/btd1337/elementary-full-icon-theme
-    sudo mv elementary-full-icon-theme /usr/share/icons/
-    gsettings set org.gnome.desktop.interface icon-theme "elementary-full-icon-theme"
-    sudo rm -rf elementary-full-icon-theme
-    clear
+#  echo "正在安装 Elementary Full 图标主题"
+#    sudo apt -y install git
+#    git clone https://github.com/btd1337/elementary-full-icon-theme
+#    sudo mv elementary-full-icon-theme /usr/share/icons/
+#    gsettings set org.gnome.desktop.interface icon-theme "elementary-full-icon-theme"
+#    sudo rm -rf elementary-full-icon-theme
+#    clear
 
   echo "正在安装 Arc 主题"
    sudo add-apt-repository ppa:noobslab/icons
     sudo apt-get update
-    sudo apt-get install arc-icons
+    sudo apt-get install arc-icons arc-theme
    clear
 
-  echo "正在安装 Paper 主题"
-    sudo add-apt-repository -y ppa:snwh/pulp
-    sudo apt update
-    sudo apt install -y paper-gtk-theme paper-icon-theme
+#  echo "正在安装 Paper 主题"
+#    sudo add-apt-repository -y ppa:snwh/pulp
+#    sudo apt update
+ #   sudo apt install -y paper-gtk-theme paper-icon-theme
+#
+ # echo 'numix-icon-theme-circle'
+  #  sudo apt-add-repository ppa:numix/ppa
+   # sudo apt-get update
+    #sudo apt-get -y install numix-icon-theme-circle
 
-  echo 'numix-icon-theme-circle'
-    sudo apt-add-repository ppa:numix/ppa
-    sudo apt-get update
-    sudo apt-get -y install numix-icon-theme-circle
+#  echo 'papirus-icon-theme'
+#    sudo add-apt-repository ppa:papirus/papirus
+#    sudo apt update && sudo apt install papirus-icon-theme
 
-  echo 'papirus-icon-theme'
-    sudo add-apt-repository ppa:papirus/papirus
-    sudo apt update && sudo apt install papirus-icon-theme
-
-  echo 'Paper iscons'
-    sudo add-apt-repository -u ppa:snwh/ppa
-    sudo apt-get install paper-icon-theme
+#  echo 'Paper iscons'
+#    sudo add-apt-repository -u ppa:snwh/ppa
+#    sudo apt-get install paper-icon-theme
 
    # Softs ----------------------------------
   echo "正在安装压缩文件支持库"
@@ -90,7 +90,11 @@ case $confirm in
     clear
 
   echo "正在安装Chrome"
-    sudo apt -y install chrome
+  echo "添加Google Chrome下载源"
+  	sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+  echo "导入谷歌软件的公钥(KEY)"
+  	wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+    sudo apt install -y google-chrome-stable
 
   echo "正在安装xfce4-terminal"
     sudo apt -y install xfce4-terminal
@@ -116,7 +120,9 @@ case $confirm in
     'sudo apt install -y oracle-java9-installer'
 
   echo "安装comix 看图软件"
-    sudo apt install -y comix
+    sudo add-apt-repository -y ppa:lintaro/mcomix
+    sudo apt install -y mcomix
+    
 
   echo 'oh-my-zsh'
     sudo apt install -y zsh

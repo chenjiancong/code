@@ -93,7 +93,8 @@ source $ZSH/oh-my-zsh.sh
  alias upgrade="sudo apt upgrade -y"
  alias autoremove="sudo apt autoremove -y"
  alias list="apt list --upgradable"
- # 直接 install softname 就可以安装软件
+ alias fix="sudo apt -y --fix-broken install"	# 修复依赖
+# 直接 install softname 就可以安装软件
 install() {sudo apt install -y "$1"}
 # 直接 remove softname 就可以卸装软件
 remove() {sudo apt remove -y "$1"}

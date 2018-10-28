@@ -1,3 +1,7 @@
+# 修改GRUB等待时间
+vim /etc/default/grub
+GRUB_TIMEOUT=1
+
 # About Command linux line
 
 # 创建文件夹
@@ -22,3 +26,15 @@ ctrl + a / e
 
 # unzip 乱码 指定解压字符集
 unzip -O CP936 XXX.zip
+
+# grep 搜索命令
+grep "hello" *.py  # 从当前*.py文件中查询含有"hello"的文件
+
+# ps 列出当前进程的快照
+# ps 是 Process Staus 缩写。它查看的结果并不动态连续；
+# 将结果进行分页查看
+ ps -aux |more
+# 将进程显示并输出到ps001.txt文件中
+ ps -aux > ps001.txt
+# 查找含有ssh的进程
+ ps -aux|grep ssh
