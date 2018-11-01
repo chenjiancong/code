@@ -1,0 +1,2 @@
+# deploy 重新部署
+rime_deployer --build .config/fcitx/rime /usr/share/rime-data/
