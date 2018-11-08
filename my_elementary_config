@@ -136,6 +136,10 @@ case $confirm in
     sudo apt-get update
     sudo apt-get install -y shadowsocks-qt5
 
+    ------>原来的如下: http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu bionic main 
+    改成如下: http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu artful main
+
+
   echo "正在Shutter"
     echo ""
     sudo apt -y install shutter
