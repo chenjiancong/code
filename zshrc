@@ -102,6 +102,7 @@ remove() {sudo apt remove -y "$1"}
 # 解压
 alias unzip="unzip -O CP936"
 alias untar="tar -zxvf"
+alias unrar="unrar -x"
 
 # docker
 # 杀死所有正在运行的容器
@@ -128,4 +129,4 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv virtualenv-init -)"
