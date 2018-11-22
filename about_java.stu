@@ -47,12 +47,12 @@ float,double
 char 2个字节
 boolean 1位
 
-# 变量
-# 局部变量 需要初始化才能使用
-# 成员变量 可以不初始化，它会根据数据类型自动初始化
-# 静态变量 static variable
+# 变量分类
+ 局部变量(local variable) 需要初始化才能使用 例{int i=0;}
+ 成员变量(member variable) 可以不初始化，它会根据数据类型自动初始化 例 int a; //成员变量自动初始化
+ 静态变量(static variable) 使用static定义。从属于类，生命周期伴随类始终 例 static int size;
 
-# 常量 Constant 一量被初始化就不能被修改；也叫符号常量
+# 常量(Constant) 一量被初始化就不能被修改；也叫符号常量
 
 # About 变量和常量命名规范
 1.所有变量、方法、类名：见名知意
