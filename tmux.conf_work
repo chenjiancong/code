@@ -1,0 +1,62 @@
+# Tmux settings
+# 修改前缀键
+unbind C-b
+set -g prefix C-x
+
+#Set a Ctrl-b shortcut for reloading your tmux config
+#按下 C-b-r重新加载配置文件
+#bind r source-file ~/.tmux.conf ; display-message "Config Reloaded.."
+
+# Set XTerm key bindings
+set -g xterm-keys on
+
+# Set colors
+#set-option -g default-terminal "screen-256color"
+set -g default-terminal "screen-256color"
+
+# Set reload key to r
+bind r source-file ~/.tmux.conf
+
+# Count sessions start at 1
+set -g base-index 1
+
+# Use vim bindings
+setw -g mode-keys vi
+
+# Remap window navigation to vim
+unbind-key j
+bind-key j select-pane -D
+unbind-key k
+bind-key k select-pane -U
+unbind-key h
+bind-key h select-pane -L
+unbind-key l
+bind-key l select-pane -R
+
+# Set the title bar
+set -g set-titles on
+set -g set-titles-string '#(whoami) :: #h :: #(curl ipecho.net/plain;echo)'
+
+# Set status bar
+# set -g status-utf8 on
+set -g status-bg colour234
+set -g status-fg white
+set -g status-interval 5
+#set -g status-left-length 90
+set -g status-right-length 60
+set -g status-left "#[fg=Green]#(whoami)#[fg=white]::#[fg=blue]#(hostname -s)#[fg=white]::#[fg=yellow]#(curl ipecho.net/plain;echo)"
+set -g status-justify left
+set -g status-right '#[fg=Cyan]#S #[fg=white]%b %d %a %R'
+
+#Tmux Plugins
+#set -g @plugin 'tmux-plugins/tmux-resurrect'
+#set -g @continuum-save-interval '30'
+
+#两个插件,需要TMUX1.9以以上
+#run-shell ~/.tmux/tmux-resurrect/resurrect.tmux
+#run-shell ~/.tmux/tmux-continuum/continuum.tmux
+
+# start selecting text typing 'v' key (once you are in copy mode)
+bind-key -t vi-copy v begin-selection
+# copy selected text to the system's clipboard
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
