@@ -54,6 +54,16 @@ boolean 1位
 
 # 常量(Constant) 一量被初始化就不能被修改；也叫符号常量
 
+# 基本数据类型(primitive data type)
+数值型 byte,short,int,long,float,double
+字符型 char
+布尔型 boolean
+
+byte 占用1字节存储空间； 范围-128~127
+short 占用2字节存储空间; 范围-32768~32767
+int 占用4字节存储空间; 范围 约21亿
+long 占用8字节存储空间; 范围 非常大
+
 # About 变量和常量命名规范
 1.所有变量、方法、类名：见名知意
 2.类成员变量：首字母小写和驼峰原则：monthSalary
