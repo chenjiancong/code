@@ -64,6 +64,15 @@ short 占用2字节存储空间; 范围-32768~32767
 int 占用4字节存储空间; 范围 约21亿
 long 占用8字节存储空间; 范围 非常大
 
+boolean true 或 false
+char    16位Unicode 2.1字符
+byte    8位整数
+short   16位整数
+int     32位整数
+long    64位整数
+float   32位浮点数
+double  64位浮点数
+
 # About 变量和常量命名规范
 1.所有变量、方法、类名：见名知意
 2.类成员变量：首字母小写和驼峰原则：monthSalary
