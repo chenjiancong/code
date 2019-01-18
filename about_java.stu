@@ -36,8 +36,6 @@ JDK>=JRE>=JVM
     b = ++a; //先将a的值加1,此时a =5,b的值为5;
     b = a++; //先将a的值赋b,再将a的值变为5,b值为4;
 
-    System.out.print("Hello World");
-
 1. this is a test
 > go or dead
 
@@ -66,10 +64,10 @@ long 占用8字节存储空间; 范围 非常大
 
 boolean true 或 false
 char    16位Unicode 2.1字符
-byte    8位整数
-short   16位整数
-int     32位整数
-long    64位整数
+byte    8位整数(带符号)
+short   16位整数(带符号)
+int     32位整数(带符号)
+long    64位整数(带符号)
 float   32位浮点数
 double  64位浮点数
 
