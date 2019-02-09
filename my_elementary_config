@@ -212,6 +212,9 @@ case $confirm in
   echo "安装mycli"
     sudo apt install -y mycli
 
+  echo "安装 preload 加速"
+    sudo apt install -y preload
+
 #  echo '隐藏Applications图标'
 #  '~/.local/share/applications'
 #    cd /usr/share/Applications
