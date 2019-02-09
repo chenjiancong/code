@@ -25,6 +25,15 @@ G  到末行
 vim diff 两个文件比较
 vim -d a.py b.py
 
+# vim 删除所有空行
+:g/^$/d
+
+# 在行首,行尾插入字符
+在行首插入
+%s/^/插入的字符
+在行尾插入
+%s/$/插入的字符
+
 #2015.11.30
 http://www.codeceo.com/article/vim-language.html
 
