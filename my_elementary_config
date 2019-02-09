@@ -14,6 +14,9 @@ case $confirm in
   sudo apt -y update && sudo apt -y upgrade
   sudo apt install software-properties-common software-properties-gtk -y
 
+  echo '安装 git,plank 框架操作'
+  sudo apt install -y git plank
+
   echo '安装 fcitx 框架操作'
     sudo apt install -y fcitx fcitx-table-wubipy fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config wget
     clear
