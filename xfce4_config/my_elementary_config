@@ -19,7 +19,6 @@ case $confirm in
 
   echo '安装 fcitx 框架操作'
     sudo apt install -y fcitx fcitx-table-wubipy fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config wget
-    sudo apt install -y fcitx fcitx-table-wubi-large fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-config-gtk fcitx-ui-classic fcitx-module-kimpanel fcitx-module-dbus libopencc1 fcitx-libs-qt fcitx-libs im-config
     clear
     echo "请在设置向导中选择fcitx为默认输入法框架，第二步请选择“Yes”"
     echo ""
@@ -120,6 +119,7 @@ case $confirm in
   echo 'oh-my-zsh'
     sudo apt install -y zsh
     wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+    "chsh -s /bin/zsh"
 
   echo '图片查看工具'
     sudo apt install -y viewnior
