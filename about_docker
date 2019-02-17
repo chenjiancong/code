@@ -44,6 +44,20 @@ docker search soft_name
 # 拉取镜像
 docker pull soft_name
 
+# 显示安装的镜像 镜像保存在
+docker images
+
+# 查看当前运行镜像
+docker ps -a
+
+# 删除镜像
+# 1,查看所有运行或者不运行容器
+docker ps -a
+# 2,停止所有容器
+docker stop $(docker ps -aq)
+# 3,删除镜像
+docker rmi ID
+
 # 安装 mariadb
 docker pull mariadb
 $ sudo docker run  --name MariaDB \

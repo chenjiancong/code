@@ -2,6 +2,8 @@
 vim /etc/default/grub
 GRUB_TIMEOUT=1
 
+sudo update-grub
+
 # About Command linux line
 
 # 创建文件夹
@@ -38,3 +40,10 @@ grep "hello" *.py  # 从当前*.py文件中查询含有"hello"的文件
  ps -aux > ps001.txt
 # 查找含有ssh的进程
  ps -aux|grep ssh
+
+# 硬盘挂载异常
+1, sudo fdisk -l    # 显示需要挂载的硬盘
+2, sudo ntfsfix /dev/sdbX   # 修复挂载的硬盘
+
+# su 已经被禁用
+sudo -i
