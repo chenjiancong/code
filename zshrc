@@ -107,6 +107,8 @@ alias unrar="unrar -x"
 # docker
 # 杀死所有正在运行的容器
  alias dockerkillall="docker kill $(docker ps -a -q)"
+# 停止所有正在运行的容器
+ alias dockerstopall="docker stop $(docker ps -a -q)"
 #快速登录MariaDB
  alias logindb="mycli -uroot -p1234 -P3307 -h0.0.0.0"
 
