@@ -98,3 +98,17 @@ double  64位浮点数
 # 三元运算符
 如果条件式为true,则取值1;false,则取值2
 条件式?值1:值2
+
+# switch 表达式的值必须是整形,字符型或字符串类型
+switch(表达式){
+        case 常量值1:
+            语句块1
+            [break;]
+        ...
+        case 常量值n:
+            语句块n
+            [break;]
+        default:
+            语句块 n+1;
+            [break;]
+    }
