@@ -121,3 +121,19 @@ for(表达式1;表达式2;表达式3){
 
 # continue 语句
 continue 不是立即跳出循环体,而是路过本次循环结束前的语句,回到循环的条件测试部分,重新开始执行循环.
+
+# 获取字符串长度
+str.length();
+例:
+String str1="Hello";
+int size =str1.length(substr);
+
+# 字符串
+# str.length() 获取长度;
+# str.indexOf() 获取首次出现索引;
+# str.lastIndexOf() 获取最后出现索引;
+# str.charAt() 获取指定索引的字符      char s1=str.charAt(1);
+
+# 数组
+# 使用步骤:1,声明;2分配内存;
+int arr0[];arr0 = new int[12];或 int arr1[] = new int[12];
