@@ -137,3 +137,7 @@ int size =str1.length(substr);
 # 数组
 # 使用步骤:1,声明;2分配内存;
 int arr0[];arr0 = new int[12];或 int arr1[] = new int[12];
+
+# "==" 与 equals()方法的区别
+"=="是运算符;比较的是两个对象引用的地址是否相等;
+equals()方法是String类中的方法;比较两个对象引用所指的内容是否相等;
