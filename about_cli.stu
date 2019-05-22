@@ -1,0 +1,61 @@
+# 学习Linux遇到的一些问题的收集解决
+
+
+# ip 修改
+# https://wiki.archlinux.org/index.php/Dhcpcd#Static_profile
+ip link set eth0 up/down # 网卡的开启/关闭
+ip addr add 192.168.1.2/24 dev eth0 # 设置网卡的ip地址
+ip route add defalut via 192.168.1.1 # 设置默认网关
+# 出现能ping通局域网机器,但无法上网,是DNS设置问题
+# 修改 /etc/resolv.conf
+# nameserver 8.8.8.8
+
+# 修改GRUB等待时间
+vim /etc/default/grub
+GRUB_TIMEOUT=1
+
+sudo update-grub
+
+# About Command linux line
+
+# 创建文件夹
+mkdir 1 2 3         #批量创建1,2,3文件夹
+mkdir 123{1,2,3,4}  #批量创建12341,12342,12343,12344文件夹
+
+# chmod
+# r=4,w=2,x=1;
+# 文件分为u,g,o
+# chmod u+x,g+w file
+# chmod u=rwx,g=rw,o=r file
+
+# vim强制保存
+:w !sudo tee %
+
+#命令行跳转到最前/后
+ctrl + a / e
+
+# 在控制台下复制粘贴
+复制命令 ctrl + Insert
+粘贴命令 shift + Insert
+
+# unzip 乱码 指定解压字符集
+unzip -O CP936 XXX.zip
+
+# grep 搜索命令
+grep "hello" *.py  # 从当前*.py文件中查询含有"hello"的文件
+
+# ps 列出当前进程的快照
+# ps 是 Process Staus 缩写。它查看的结果并不动态连续；
+# 将结果进行分页查看
+ ps -aux |more
+# 将进程显示并输出到ps001.txt文件中
+ ps -aux > ps001.txt
+# 查找含有ssh的进程
+ ps -aux|grep ssh
+
+# 硬盘挂载异常
+1, sudo fdisk -l    # 显示需要挂载的硬盘
+2, sudo ntfsfix /dev/sdbX   # 修复挂载的硬盘
+
+# su 已经被禁用
+sudo -i
