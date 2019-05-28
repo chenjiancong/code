@@ -64,7 +64,7 @@ short 占用2字节存储空间; 范围-32768~32767
 int 占用4字节存储空间; 范围 约21亿
 long 占用8字节存储空间; 范围 非常大
 
-boolean true 或 false
+boolean true 或 false;默认值为false,1
 char    16位Unicode 2.1字符
 byte    8位整数(带符号)
 short   16位整数(带符号)
