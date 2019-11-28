@@ -32,6 +32,8 @@ drop table tb_name;
 
 备份数据库
 mysqldump -hhostname -uusername -ppassword db_name > backupfile.sql
+# 备份指定表
+mysqldump -hhostname -uusername -ppassword db_name --tabales tabName> backupfile.sql
 仅导出表结构
 mysqldump -hhostname -uusername -ppassword --no-data db_name >backupfile.sql
 
